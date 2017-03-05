@@ -1,6 +1,8 @@
 #include "Microsoft.h"
-#include "JuegosMicrosoft.h"
 #include "Consolas.h"
+
+
+using namespace std;
 
 Microsoft::Microsoft() : Consolas( pañosalida,  pmodelo,
 		 pestado,  pnumeroserie,  pprecio) 
@@ -12,3 +14,4 @@ Microsoft::Microsoft() : Consolas( pañosalida,  pmodelo,
 	this -> precio=pprecio;    
 }
 
+	

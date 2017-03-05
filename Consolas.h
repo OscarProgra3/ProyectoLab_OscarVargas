@@ -1,6 +1,8 @@
 #ifndef CONSOLAS_H
 #define CONSOLAS_H
 
+using namespace std;
+
 class Consolas
 {
 	protected:

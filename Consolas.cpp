@@ -1,6 +1,10 @@
 #include "Consolas.h"
 #include <iostream>
 
+
+using namespace std;
+
+
 Consolas::Consolas(int pañosalida, string pmodelo,
 		string pestado, int pnumeroserie, double pprecio)
 {

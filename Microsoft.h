@@ -1,12 +1,12 @@
 #include "Consolas.h"
-#include "JuegosMicrosoft.h"
+
 
 #ifndef MICROSOFT_H
 #define MICROSOFT_H
 
 using namespace std;
 
-class Microsoft : Consolas
+class Microsoft : public Consolas
 {
 	private: 
 	
