@@ -5,12 +5,12 @@
 
 using namespace std;
 
-class JuegosNintendo : public Videojuegos
+class juegosNintendo : public Videojuegos
 {
 	private:
 	
 	public:
-		JuegosNintendo(string, int, string, string, int, double);
+		juegosNintendo(string, int, string, string, int, double);
 
 	
 };
