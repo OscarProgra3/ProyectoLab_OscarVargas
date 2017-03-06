@@ -2,6 +2,7 @@
 
 using namespace std;
 
-Administrador::Administrador(string pnombre, string pcontraseña) : Usuario(pcontraseña)
+Administrador::Administrador(string pnombre, string pcontraseña) : Usuario(pnombre)
 {
 }
+

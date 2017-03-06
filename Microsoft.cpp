@@ -14,4 +14,4 @@ Microsoft::Microsoft() : Consolas( pañosalida,  pmodelo,
 	this -> precio=pprecio;    
 }
 
-	
+		
