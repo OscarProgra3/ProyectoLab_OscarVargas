@@ -1,6 +1,6 @@
 #ifndef VIDEOJUEGOS_H
 #define VIDEOJUEGOS_H
-
+#include <string>
 using namespace std;
 
 class Videojuegos
@@ -17,7 +17,7 @@ class Videojuegos
 
 
 	public:
-		Videojuegos(string, int, string, string, int, double);
+		Videojuegos(string, int, string,int,  string,string, int, double);
 		
 		string getNombre();
 		void setNombre(string);

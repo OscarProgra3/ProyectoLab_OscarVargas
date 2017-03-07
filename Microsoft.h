@@ -1,4 +1,5 @@
 #include "Consolas.h"
+#include <string>
 
 
 #ifndef MICROSOFT_H

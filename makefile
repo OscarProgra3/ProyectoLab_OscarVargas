@@ -37,7 +37,7 @@ juegosSquareEnix.o: juegosSquareEnix.cpp juegosSquareEnix.h Videojuegos.h
 juegosUbisoft.o: juegosUbisoft.cpp juegosUbisoft.h Videojuegos.h
 	g++ -c juegosUbisoft.cpp
 
-Microsoft.o: Microsoft-cpp Microsoft.h Consolas.h
+Microsoft.o: Microsoft.cpp Microsoft.h Consolas.h
 	g++ -c Microsoft.cpp
 
 Nintendo.o: Nintendo.cpp Nintendo.h Consolas.h

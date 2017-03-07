@@ -10,9 +10,9 @@ class juegosKonami: public Videojuegos
 	private:
 	
 	public:
-		juegosKonami(string, int, string, string, int, double);
+		juegosKonami(string, int, string,int,string, string, int, double);
 
 	
-}
+};
 
 #endif

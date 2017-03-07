@@ -1,8 +1,16 @@
 #include "Administrador.h"
+#include <string>
 
-using namespace std;
-
-Administrador::Administrador(string pnombre, string pcontraseña) : Usuario(pnombre)
+Administrador::Administrador(string pnombre, string pcontrasenia) : Usuario(pnombre)
 {
+	contrasenia=pcontrasenia;
 }
 
+string Administrador::getContrasenia()
+{
+	return contrasenia;
+}
+void Administrador::setContrasenia(string tcontra)
+{
+	contrasenia=tcontra;
+}

@@ -1,5 +1,5 @@
-#include "JuegosSony.h"
-#include "Videojuegos.h"
+#include "juegosSony.h"
+#include <string>
 
 using namespace std;
 

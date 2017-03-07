@@ -1,13 +1,6 @@
 #include "Sony.h"
-#include "Consolas.h"
 
-Sony::Sony() : Consolas( pañosalida,  pmodelo,
-		 pestado,  pnumeroserie,  pprecio) 
+Sony::Sony(int paniosalida,string  pmodelo, string pestado, int pnumeroserie, double pprecio) : Consolas( paniosalida,  pmodelo, pestado,  pnumeroserie,  pprecio) 
 {
-	this -> añosalida=pañosalida;
-	this -> modelo=pmodelo;
-	this -> estado=pestado;
-	this -> numeroserie=pnumeroserie;
-	this -> precio=pprecio;    
 }
 

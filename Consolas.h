@@ -1,12 +1,13 @@
 #ifndef CONSOLAS_H
 #define CONSOLAS_H
+#include <string>
 
 using namespace std;
 
 class Consolas
 {
 	protected:
-		int añosalida;
+		int aniosalida;
 		string modelo;
 		string estado;
 		int numeroserie;
@@ -18,8 +19,8 @@ class Consolas
 		Consolas();
 		
 		//mutadores
-		int getAñosalida();
-		void setAñosalida(int);
+		int getAniosalida();
+		void setAniosalida(int);
 
 		string getModelo();
 		void setModelo(string);

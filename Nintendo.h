@@ -1,5 +1,5 @@
 #include "Consolas.h"
-
+#include <string>
 
 #ifndef NINTENDO_H
 #define NINTENDO_H

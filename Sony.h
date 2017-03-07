@@ -1,4 +1,5 @@
 #include "Consolas.h"
+#include <string>
 
 #ifndef SONY_H
 #define SONY_H

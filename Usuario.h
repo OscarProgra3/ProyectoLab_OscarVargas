@@ -1,6 +1,6 @@
 #ifndef USUARIO_H
 #define USUARIO_H
-
+#include <string>
 using namespace std;
 
 class Usuario
@@ -9,10 +9,10 @@ class Usuario
 		string nombre;
 
 	public:
-		Usuario();
+	//	Usuario();
 		Usuario(string);
 		string getNombre();
-		void setnombre(string);
+		void setNombre(string );
 
 		
 };

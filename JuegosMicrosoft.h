@@ -9,7 +9,7 @@ class juegosMicrosoft : public Videojuegos
 {
 	
 	public:
-		juegosMicrosoft(string, int, string, string, int, double);
+		juegosMicrosoft(string, int, string, int, string, string, int, double);
 
 	
 };

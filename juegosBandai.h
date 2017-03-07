@@ -1,5 +1,5 @@
 #include "Videojuegos.h"
-
+#include <string>
 #ifndef JUEGOSBANDAI_H
 #define JUEGOSBANDAI_H
 
@@ -7,10 +7,9 @@ using namespace std;
 
 class juegosBandai : public Videojuegos
 {
-	private:
-	
+
 	public:
-		JuegosBandai(string, int, string, string, int, double);
+		juegosBandai(string, int , string , int , string , string, int ,double);
 
 	
 };

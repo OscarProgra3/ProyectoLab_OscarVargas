@@ -1,14 +1,15 @@
 #include "Consolas.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
 
-Consolas::Consolas(int pañosalida, string pmodelo,
+Consolas::Consolas(int paniosalida, string pmodelo,
 		string pestado, int pnumeroserie, double pprecio)
 {
-	this -> añosalida=pañosalida;
+	this -> aniosalida=paniosalida;
 	this -> modelo=pmodelo;
 	this -> estado=pestado;
 	this -> numeroserie=pnumeroserie;
@@ -16,49 +17,49 @@ Consolas::Consolas(int pañosalida, string pmodelo,
 }
 
 
-Consolas::getAñosalida()
+int Consolas::getAniosalida()
 {
-	return añosalida;
+	return aniosalida;
 }
-Consolas::setAñosalida(int tañosalida)
+void Consolas::setAniosalida(int taniosalida)
 {
-	añosalida=pañosalida;
+	aniosalida=taniosalida;
 }
 
-Consolas::getModelo()
+string Consolas::getModelo()
 {
 	return modelo;
 }
-Consola::setModelo(string tmodelo)
+void Consolas::setModelo(string tmodelo)
 {
-	modelo=pmodelo;
+	modelo=tmodelo;
 }
 
-Consolas::getEstado()
+string Consolas::getEstado()
 {
 	return estado;
 }
-Consolas::setEstado(string tpestado)
+void Consolas::setEstado(string testado)
 {
-	estado=pestado;
+	estado=testado;
 }
 
-Consolas::getNumeroSerie()
+int Consolas::getNumeroSerie()
 {
 	return numeroserie;
 }
-Consolas::setNumeroSerie(int tnumeroserie)
+void Consolas::setNumeroSerie(int tnumeroserie)
 {
-	numeroserie=pnumeroserie;
+	numeroserie=tnumeroserie;
 }
 
-Consolas::getPrecio()
+double Consolas::getPrecio()
 {
 	return precio;
 }
-Consolas::setPrecio(double tprecio)
+void Consolas::setPrecio(double tprecio)
 {
-	precio=pprecio;
+	precio=tprecio;
 }
 
 

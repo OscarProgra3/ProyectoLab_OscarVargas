@@ -1,17 +1,16 @@
 #include "Usuario.h"
-
-using namespace std;
+#include "string"
 
 Usuario::Usuario(string pnombre)
 {
-	this-> nombre=pnombre;
+	nombre=pnombre;
 }
 
-Usuario::getNombre()
+string Usuario::getNombre()
 {
 	return nombre;
 }
-Usuario::setNombre(string tnombre)
+void Usuario::setNombre(string tnombre)
 {
-	this-> nombre=tnombre;
+	 nombre=tnombre;
 }

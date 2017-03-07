@@ -1,6 +1,5 @@
 #include "Videojuegos.h"
-
-
+#include <string>
 using namespace std;
 
 Videojuegos::Videojuegos(string pnombre, int panio, string pconsola, int pnumjudaores, string pgenero, string pestado, int pnumserie,double pprecio)
@@ -15,79 +14,79 @@ Videojuegos::Videojuegos(string pnombre, int panio, string pconsola, int pnumjud
 		this-> precio=pprecio;
 }
 
-Videojuegos::getNombre()
+string Videojuegos::getNombre()
 {
 	return nombre;
 }
-Videojuegos::setNombre(string tnombre)//tnombre=temporal nombre
+void Videojuegos::setNombre(string tnombre) 		
 {
-	this->nombre=tnombre;
+	nombre=tnombre;	
 }
 
 
-Videojuegos::getAnio()
+int Videojuegos::getAnio()
 {
 	return anio;
 }
-Videojuegos::setAnio(int tanio)
+void Videojuegos::setAnio(int tanio)
 {
 	this->anio=tanio;
 }
 
 
-Videojuegos::getConsola()
+string Videojuegos::getConsola()
 {
 	return consola;
 }
-Videojuegos::setConsola(string tconsola)
+void Videojuegos::setConsola(string tconsola)
 {
 	this->consola=tconsola;
 }
 
 
-Videojuegos::getNumjugadores()
+int Videojuegos::getNumjugadores()
 {
 	return numjugadores;
 }
-Videojuegos::setNumjugadores(int tnumjugadores)
+void Videojuegos::setNumjugadores(int tnumjugadores)
 {
 	this->numjugadores=tnumjugadores;
 }
 
-Videojuegos::getGenero()
+string Videojuegos::getGenero()
 {
 	return genero;
 }
-Videojuegos::setGenero(string tgenero)
+void Videojuegos::setGenero(string tgenero)
 {
 	this->genero=tgenero;
 }
 
 
-Videojuegos::getEstado()
+string Videojuegos::getEstado()
 {
 	return estado;
 }
-Videojuegos::setNombre(string tnombre)//tnombre=temporal nombre
+void Videojuegos::setEstado(string testado)//tnombre=temporal nombre
 {
-	this->nombre=tnombre;
+	this->estado=testado;
 }
 
 
-Videojuegos::getNumSerie()
+int Videojuegos::getNumSerie()	
 {
 	return numserie;
 }
-Videojuegos::setNumSerie(int tnumserie)
+void Videojuegos::setNumSerie(int tnumserie)
 {
 	this->numserie=tnumserie;
 }
 
-Videojuegos::getPrecio()
+double Videojuegos::getPrecio()
 {
 	return precio;
 }
-Videojuegos::setPrecio(double tprecio)
+void Videojuegos::setPrecio(double tprecio)
 {
 	this->precio=tprecio;
 }
