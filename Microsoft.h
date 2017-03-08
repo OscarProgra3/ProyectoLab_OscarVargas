@@ -13,7 +13,6 @@ class Microsoft : public Consolas
 	
 	public:
 		Microsoft(int, string, string, int, double);
-		
 	};
 
 #endif
