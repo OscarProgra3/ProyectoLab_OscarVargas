@@ -1,10 +1,7 @@
 #include "Venta.h"
-#include "Consola.h"
-#include "Videojuegos.h"
-
 
 Venta::Venta(string nomcliente, ventor<Consolas*> listaconsola, vector<Videojuegos*> listavideojuegos, 
-	string horafinalizacion, string nombreusuario,double subtotal)
+	string horafinalizacion, string nombreusuario, double subtotal)
 {
 	nomcliente=nomcliente;
 	listaconsolas=listaconsolas;

@@ -2,6 +2,8 @@
 #define VENTA_H
 #include <vector>
 #include <string>
+#include "Consolas.h"
+#include "Videojuegos.h"
 	
 using namespace std;
 

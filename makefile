@@ -1,7 +1,7 @@
-Main: Main.o Administrador.o Consolas.o juegosBandai.o juegosElectronicArts.o juegosKonami.o JuegosMicrosoft.o juegosNintendo.o juegosSega.o juegosSony.o juegosSquareEnix.o juegosUbisoft.o Microsoft.o Nintendo.o Sony.o Usuario.o Vendedor.o Videojuegos.o
-	g++ Main.o Administrador.o Consolas.o juegosBandai.o juegosElectronicArts.o juegosKonami.o JuegosMicrosoft.o juegosNintendo.o juegosSega.o juegosSony.o juegosSquareEnix.o juegosUbisoft.o Microsoft.o Nintendo.o Sony.o Usuario.o Vendedor.o Videojuegos.o -o Main
+Main: Main.o Administrador.o Consolas.o juegosBandai.o juegosElectronicArts.o juegosKonami.o JuegosMicrosoft.o juegosNintendo.o juegosSega.o juegosSony.o juegosSquareEnix.o juegosUbisoft.o Microsoft.o Nintendo.o Sony.o Usuario.o Vendedor.o Venta.o Videojuegos.o
+	g++ Main.o Administrador.o Consolas.o juegosBandai.o juegosElectronicArts.o juegosKonami.o JuegosMicrosoft.o juegosNintendo.o juegosSega.o juegosSony.o juegosSquareEnix.o juegosUbisoft.o Microsoft.o Nintendo.o Sony.o Usuario.o Vendedor.o Venta.o Videojuegos.o -o Main
 
-Main.o: Main.cpp Administrador.h Consolas.h juegosBandai.h juegosElectronicArts.h juegosKonami.h JuegosMicrosoft.h juegosNintendo.h juegosSega.h juegosSony.h juegosSquareEnix.h juegosUbisoft.h Microsoft.h Nintendo.h Sony.h Usuario.h Vendedor.h Videojuegos.h
+Main.o: Main.cpp Administrador.h Consolas.h juegosBandai.h juegosElectronicArts.h juegosKonami.h JuegosMicrosoft.h juegosNintendo.h juegosSega.h juegosSony.h juegosSquareEnix.h juegosUbisoft.h Microsoft.h Nintendo.h Sony.h Usuario.h Vendedor.h Venta.h Videojuegos.h
 	g++ -c Main.cpp
 
 Administrador.o: Administrador.cpp Administrador.h Usuario.h
@@ -51,6 +51,9 @@ Usuario.o: Usuario.cpp Usuario.h
 
 Vendedor.o: Vendedor.cpp Vendedor.h Usuario.h
 	g++ -c Vendedor.cpp
+
+Venta.o: Venta.cpp Venta.h Consolas.h Videojuegos.h
+	g++ -c Venta.cpp
 
 Videojuegos.o: Videojuegos.cpp Videojuegos.h
 	g++ -c Videojuegos.cpp
