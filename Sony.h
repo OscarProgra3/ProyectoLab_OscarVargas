@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Sony : Consolas
+class Sony : public Consolas
 {
 	private: 
 	
