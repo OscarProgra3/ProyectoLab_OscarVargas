@@ -1,6 +1,8 @@
 #include "Venta.h"
+#include "Consolas.h"
 
-Venta::Venta(string nomcliente, ventor<Consolas*> listaconsola, vector<Videojuegos*> listavideojuegos, 
+
+Venta::Venta(string nomcliente, vector<Consolas*> listaconsola, vector<Videojuegos*> listavideojuegos, 
 	string horafinalizacion, string nombreusuario, double subtotal)
 {
 	nomcliente=nomcliente;
@@ -20,11 +22,11 @@ void Venta::setNombrecliente(string tnombrecliente)
 	nomcliente=tnombrecliente;
 }
 
-Consolas* Venta::getListaconsola(int num)
+Consolas* Venta::getListaconsolas(int num)
 {
 	return listaconsolas.at(num);
 }
-void Venta::setListaconsola(Consolas* e)
+void Venta::setListaconsolas(Consolas* e)
 {
 	listaconsolas.push_back(e);
 }

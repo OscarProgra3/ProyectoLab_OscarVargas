@@ -2,6 +2,7 @@
 #define VENTA_H
 #include <vector>
 #include <string>
+#include <vector>
 #include "Consolas.h"
 #include "Videojuegos.h"
 	
@@ -22,13 +23,13 @@ class Venta
 		~Venta();
 
 		string getNombrecliente();
-		void setNomcli(string);
+		void setNombrecliente(string);
 
 		Consolas* getListaconsolas(int);
-		void setConsolas(Consolas*); 
+		void setListaconsolas(Consolas*); 
 	
-		Videojuegos* getListavideojuegos();
-		void setListaVideojuegos(int);
+		Videojuegos* getListavideojuegos(int);
+		void setListavideojuegos(Videojuegos*);
 
 		string getHorafinalizacion();
 		void setHorafinalizacion(string);
