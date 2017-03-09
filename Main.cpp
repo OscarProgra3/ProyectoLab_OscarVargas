@@ -97,6 +97,70 @@ int main()
 
 					if (respuesta4 == 1) //Agregar Consola
 					{
+						/*cout << "Que tipo de consola desea agregar?\n";
+						cout << "1) Microsoft\n";
+						cout << "2) Nintendo\n";
+						cout << "3) Sony\n";
+						int respuesta5;
+						cin >> respuesta5;
+						while(respuesta5 <= 0 || respuesta5 > 3) {
+							cout << "Numero invalido, ingrese su numero de nuevo!\n";
+							cin >> respuesta5;
+						}
+						if (respuesta5 == 1)
+						{*///Agregar consola de microsoft
+						bool norepetido = true;
+
+						int aniodesalida;
+						string modelodeconsola;
+						string estadodeconsola;
+						int numerodeserie;
+						double preciodeconsola;
+
+						cout << "Ingrese el año de salida de la consola.\n";
+						cin >> aniodesalida;
+						cout << "Ingrese el estado de la consola.\n";
+						cin >> estadodeconsola;
+						cout << "Ingrese el numero de serie de la consola.\n";
+						cin >> numerodeserie;
+						for (int i = 0; i < Listaconsolas.size(); ++i)
+						{
+							if (numerodeserie == Listaconsolas -> getNumeroSerie())
+							{
+								norepetido = false;
+							}
+						}
+						while(norepetido == false) {
+							cout << "Numerio de serie repetido, ingrese el numero de serie de nuevo!\n";
+							cin >> numerodeserie;
+							norepetido = true;
+							for (int i = 0; i < Listaconsolas.size(); ++i)
+							{
+								if (numerodeserie == Listaconsolas[i] -> getNumeroSerie())
+								{
+									norepetido = false;
+								}
+							}
+						}
+						cout << "Ingrese el precio de la Consola: \n";
+						cin >> preciodeconsola;
+						cout << "Escoga el modelo de la consola: \n";
+						cout << "1) Xbox\n";
+						cout << "2) Xbox 360\n";
+						cout << "3) Xbox One\n";
+						int respuestamodelo;
+						cin >> respuestamodelo;
+						if (respuestamodelo == 1)
+						{
+							modelodeconsola = "Xbox";
+						} else if (respuestamodelo == 2)
+						{
+							modelodeconsola = "Xbox 360";
+						} else {
+							modelodeconsola = "Xbox One";
+						}
+
+						Consola* consolaM;
 						cout << "Que tipo de consola desea agregar?\n";
 						cout << "1) Microsoft\n";
 						cout << "2) Nintendo\n";
@@ -108,66 +172,132 @@ int main()
 							cin >> respuesta5;
 						}
 						if (respuesta5 == 1)
-						{//Agregar consola de microsoft
-							bool norepetido = true;
-
-							int aniodesalida;
-							string modelodeconsola;
-							string estadodeconsola;
-							int numerodeserie;
-							double preciodeconsola;
-							cout << "Ingrese el año de salida de la consola.\n";
-							cin >> aniodesalida;
-							cout << "Ingrese el estado de la consola.\n";
-							cin >> estadodeconsola;
-							cout << "Ingrese el numero de serie de la consola.\n";
-							cin >> numerodeserie;
-							for (int i = 0; i < consolasMicrosoft.size(); ++i)
-							{
-								if (numerodeserie == consolasMicrosoft[i] -> getNumeroSerie())
-								{
-									norepetido = false;
-								}
-							}
-							while(norepetido == false) {
-								cout << "Numerio de serie repetido, ingrese el numero de serie de nuevo!\n";
-								cin >> numerodeserie;
-								norepetido = true;
-								for (int i = 0; i < consolasMicrosoft.size(); ++i)
-								{
-									if (numerodeserie == consolasMicrosoft[i] -> getNumeroSerie())
-									{
-										norepetido = false;
-									}
-								}
-							}
-							cout << "Ingres el precio de la Consola: \n";
-							cin >> preciodeconsola;
-							cout << "Escoga el modelo de la consola: \n";
-							cout << "1) Xbox\n";
-							cout << "2) Xbox 360\n";
-							cout << "3) Xbox One\n";
-							int respuestamodelo;
-							cin >> respuestamodelo;
-							if (respuestamodelo == 1)
-							{
-								modelodeconsola = "Xbox";
-							} else if (respuestamodelo == 2)
-							{
-								modelodeconsola = "Xbox 360";
-							} else {
-								modelodeconsola = "Xbox One";
-							}
-							
+						{//Agregando consola de microsoft
+							consolaM = new Microsoft(aniodesalida, modelodeconsola, estadodeconsola, numerodeserie, preciodeconsola);
+							Listaconsolas.push_back(consolaM);
+							cout << "Consola agregada exitosamente!\n";
 						} else if (respuesta5 == 2)
 						{//Agregar consola de nintendo
-							
-
+							consolaM = new Nintendo(aniodesalida, modelodeconsola, estadodeconsola, numerodeserie, preciodeconsola);
+							Listaconsolas.push_back(consolaM);
+							cout << "Consola agregada exitosamente!\n";
 						} else {//Agregar consola de sony
-
+							consolaM = new Sony(aniodesalida, modelodeconsola, estadodeconsola, numerodeserie, preciodeconsola);
+							Listaconsolas.push_back(consolaM);
+							cout << "Consola agregada exitosamente!\n";
 						}
 
 					} else { //Agregar Videojuegos
+
+						bool norepetido2 = true;
+
+						string nombrejuego;
+						int aniodesalida2;
+						string consoladeljuego;	
+						int numjugadores;
+						string genero;
+						string estadojuego;
+						int numserie;
+						double preciojuego;
+
+						cout << "Ingrese el nombre del juego.\n";
+						cin >> nombrejuego;
+						cout << "Ingrese el año de salida del juego.\n";
+						cin >> aniodesalida2;
+						cout << "Para que consola es el videojuego?\n";
+						cin >> consoladeljuego;
+						cout << "Ingrese el estado del juego.\n";
+						cin >> estadojuego;
+						cout << "Ingrese el numero de jugadores.\n";
+						cin << numjugadores;
+						cout << "Ingrese el numero de serie del juego.\n";
+						cin >> numserie;
+						cout << "Ingrese el genero del juego.\n";
+						cin >> genero;
+						cout << "Ingrese el precio del juego.\n";
+						cin >> preciojuego;
+						for (int i = 0; i < ListaVideojuegos.size(); ++i)
+						{
+							if (numserie == ListaVideojuegos -> getNumSerie())
+							{
+								norepetido2 = false;
+							}
+						}
+						while(norepetido2 == false) {
+							cout << "Numerio de serie repetido, ingrese el numero de serie de nuevo!\n";
+							cin >> numserie;
+							norepetido2 = true;
+							for (int i = 0; i < ListaVideojuegos.size(); ++i)
+							{
+								if (numserie == ListaVideojuegos[i] -> getNumSerie())
+								{
+									norepetido2 = false;
+								}
+							}
+						}
+
+						Videojuegos* juego;
+						cout << "Que tipo de juego desea agregar?\n";
+						cout << "1) Juego de Microsoft\n";
+						cout << "2) Juego de Nintendo\n";
+						cout << "3) Juego de Sony\n";
+						cout << "4) Juego de Sega\n";
+						cout << "5) Juego de Bandai\n";
+						cout << "6) Juego de Electrocic Arts\n";
+						cout << "7) Juego de Konami\n";
+						cout << "8) Juego de Square Enix\n";
+						cout << "9) Juego de Ubisoft\n";
+						int respuesta5;
+						cin >> respuesta5;
+						while(respuesta5 <= 0 || respuesta5 > 9) {
+							cout << "Numero invalido, ingrese su numero de nuevo!\n";
+							cin >> respuesta5;
+						}
+						if (respuesta5 == 1)
+						{//Agregar juego de microsoft
+							juego = new JuegosMicrosoft(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego);
+							ListaVideojuegos.push_back(juego);
+							cout << "Juego agregado exitosamente!\n";
+						} else if (respuesta5 == 2)
+						{//Agregar juego de nintendo
+							juego = new juegosNintendo(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego);
+							ListaVideojuegos.push_back(juego);
+							cout << "Juego agregado exitosamente!\n";
+						} else if (respuesta5 == 3)
+						{//Agregar juego de sony
+							juego = new juegosSony(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego);
+							ListaVideojuegos.push_back(juego);
+							cout << "Juego agregado exitosamente!\n";
+						} else if (respuesta5 == 4)
+						{//Agregar juego de Sega
+							juego = new juegosSega(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego);
+							ListaVideojuegos.push_back(juego);
+							cout << "Juego agregado exitosamente!\n";
+						} else if (respuesta5 == 5)
+						{//Agregar juego de bandai
+							juego = new juegosBandai(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego);
+							ListaVideojuegos.push_back(juego);
+							cout << "Juego agregado exitosamente!\n";
+						} else if (respuesta5 == 6)
+						{//Agregar juego de electronic arts
+							juego = new juegosElectronicArts(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego);
+							ListaVideojuegos.push_back(juego);
+							cout << "Juego agregado exitosamente!\n";
+						} else if (respuesta5 == 7)
+						{//Agregar juego de konami
+							juego = new juegosKonami(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego);
+							ListaVideojuegos.push_back(juego);
+							cout << "Juego agregado exitosamente!\n";
+						} else if (respuesta5 == 8)
+						{//Agregar juego de square enix
+							juego = new juegosSquareEnix(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego);
+							ListaVideojuegos.push_back(juego);
+							cout << "Juego agregado exitosamente!\n";
+						} else { //Agregar juego de ubisoft
+							juego = new juegosUbisoft(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego);
+							ListaVideojuegos.push_back(juego);
+							cout << "Juego agregado exitosamente!\n";
+						}
 
 					}
 
@@ -178,8 +308,13 @@ int main()
 				} else { //Eliminar
 
 				}
+				cout << "Desea salir? 1 = Salir 0 = No salir\n";
+				cin >> online1;
+				while(online1 < 0 || online1 > 1) {
+					cout << "Numero invalido, ingrese su numero de nuevo!\n";
+					cin >> online1;
+				}
 			}
-
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 		} else {// Si es Vendedor
 			int online2 = 0;
@@ -201,8 +336,14 @@ int main()
 						funcionvender();
 					}
 				}
+				cout << "Desea salir? 1 = Salir 0 = No salir\n";
+				cin >> online2;
+				while(online2 < 0 || online2 > 1) {
+					cout << "Numero invalido, ingrese su numero de nuevo!\n";
+					cin >> online2;
+				}
 			}
-		}		
+		}
 
 		cout << "Desea salir de GAMEHUB? (S/N)\n";
 		char respuestaFinal;
@@ -212,25 +353,23 @@ int main()
 			respuesta1 = 1;
 		}
 
-		//Borrar vector de consolasMicrosoft
-		for (int i=0; i<consolasMicrosoft.size(); i++){
-    		delete consolasMicrosoft[i];
-  		}
-		consolasMicrosoft.clear();
-
-		//Borrar vector de consolasNintendo
-		for (int i=0; i<consolasNintendo.size(); i++){
-    		delete consolasNintendo[i];
-  		}
-		consolasNintendo.clear();
-
-		//Borrar vector de consolasSony
-		for (int i=0; i<consolasSony.size(); i++){
-    		delete consolasSony[i];
-  		}
-		consolasSony.clear();
-
 	}
+
+	//Borrar punteros
+	delete consolaM;
+
+	//Borrar vector de consolasMicrosoft
+	for (int i=0; i< Listaconsolas.size(); i++){
+    	delete Listaconsolas[i];
+  	}
+	Listaconsolas.clear();
+
+	//Borrar vector de consolasNintendo
+	for (int i=0; i< ListaVideojuegos.size(); i++){
+    	delete ListaVideojuegos[i];
+  	}
+	ListaVideojuegos.clear();
+	
 	cout << "Nos vemos luego!\n";
 
 	/*Nintendo* nin=new Nintendo(2017,"Sega","bueno",111,15.30);
