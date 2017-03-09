@@ -3,6 +3,8 @@
 #include <vector>
 #include <fstream>
 
+#include <direct> //mkdir
+
 #include "Consolas.h"
 #include "Microsoft.h"
 #include "Sony.h"
@@ -30,6 +32,14 @@ void funciondibujo();
 
 int main()
 {
+
+	//creando carpeta para el archivo binnario
+	
+	
+
+
+
+
 	Administrador* admin = new Administrador(); //Administrador predefinido
 	int respuesta1 = 0;
 	while (respuesta1 == 0) {
