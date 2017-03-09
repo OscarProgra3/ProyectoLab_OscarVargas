@@ -24,14 +24,24 @@
 
 using namespace std;
 
-int main(int argc, char const *argv[])
+void funcionvender();
+void funciondibujo();
+
+
+int main()
 {
 	Administrador* admin = new Administrador(); //Administrador predefinido
 	int respuesta1 = 0;
 	while (respuesta1 == 0) {
+
+		vector<Consolas*> Listaconsolas;
+		vector<Videojuegos*> ListaVideojuegos;
+	
+
 		vector<Microsoft*> consolasMicrosoft;
 		vector<Nintendo*> consolasNintendo;
 		vector<Sony*> consolasSony;
+
 		cout << "Bienvenido a GAMEHUB\n";
 		cout << "Como desea entrar?\n";
 		cout << "1) Entrar como Administrador\n";
@@ -173,10 +183,26 @@ int main(int argc, char const *argv[])
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 		} else {// Si es Vendedor
 			int online2 = 0;
-			while(online2 == 0) {
+			while(online2 == 0)
+			{
+				int opcvendedor=0;
+				while(opcvendedor!=3)
+				{
+					int opcv=0;
+					cout<<"Bienvenido vendedor\n ¿Que es lo que desea realizar?\n1.-Agregar a el inventario\n2.-Vender\n3.-Sair\nIngrese su opcion: ";
+					cin>>opcv;
 
+					if (opcv==1)
+					{
+						void funciondibujo();
+					}
+					if (opcv==2)
+					{
+						funcionvender();
+					}
+				}
 			}
-		}
+		}		
 
 		cout << "Desea salir de GAMEHUB? (S/N)\n";
 		char respuestaFinal;
@@ -213,4 +239,46 @@ int main(int argc, char const *argv[])
 	cout<< "\nYOLOYOLOYOLOYOLOYOLO"<<endl;
 	cout<<nin->getModelo()<<"ESOOOOOO"<<endl;
 		return 0;*/
+}
+
+void funcionvender()
+{
+	cout<<"    ___\n   |[_]|\n   |+ ;| GAMEHUB\n   `---'\n";
+	 
+	cout<<"\n      Bienvenido vendedor\n";
+
+	cout<<"";
+
+	int respv=0;
+	while(respv!=3)
+	{	 
+		cout<<"¿Que es lo que desea vender?\n";
+		cout<<"1.-Consolas\n2.-Videojuegos\n3.-Salir"<<endl;
+		cin>>respv;
+		if (respvender==1)
+		{
+ 	
+
+ 		}
+	 	if (respvender==2)
+	 	{
+	 		string respventavideo="o";
+	 		while(respventavideo=="s"||respventavideo=="S")
+	 		{
+
+	 			cout<<" De cual compañia desea el videojuego"<<endl;
+	 			cout<<"1.-Microsoft\n2.-Sony\n3.-Nintendo\n4.-Bandai\n5.-Konami\n6.-Square Enix\n7.-Electronic Arts\n8.-SEGA\n9.-Ubisoft\n ";
+
+
+
+	 			cout<<"¿Desea aregar otro videojuego?";
+	 			cin>>respventavideo;
+	 		}	
+	 	}
+	}
+}
+
+void funciondibujo()
+{
+	cout<<"**************BIENVENIDO******************\n";
 }
