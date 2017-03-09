@@ -255,12 +255,12 @@ void funcionvender()
 		cout<<"¿Que es lo que desea vender?\n";
 		cout<<"1.-Consolas\n2.-Videojuegos\n3.-Salir"<<endl;
 		cin>>respv;
-		if (respvender==1)
+		if (respv==1)
 		{
  	
 
  		}
-	 	if (respvender==2)
+	 	if (respv==2)
 	 	{
 	 		string respventavideo="o";
 	 		while(respventavideo=="s"||respventavideo=="S")
