@@ -125,7 +125,7 @@ int main()
 						cin >> numerodeserie;
 						for (int i = 0; i < Listaconsolas.size(); ++i)
 						{
-							if (numerodeserie == Listaconsolas -> getNumeroSerie())
+							if (numerodeserie == Listaconsolas.at(i) -> getNumeroSerie())
 							{
 								norepetido = false;
 							}
@@ -160,7 +160,7 @@ int main()
 							modelodeconsola = "Xbox One";
 						}
 
-						Consola* consolaM;
+						Consolas* consolaM;
 						cout << "Que tipo de consola desea agregar?\n";
 						cout << "1) Microsoft\n";
 						cout << "2) Nintendo\n";
@@ -186,6 +186,8 @@ int main()
 							Listaconsolas.push_back(consolaM);
 							cout << "Consola agregada exitosamente!\n";
 						}
+						//Borrar punteros
+						delete consolaM;
 
 					} else { //Agregar Videojuegos
 
@@ -209,7 +211,7 @@ int main()
 						cout << "Ingrese el estado del juego.\n";
 						cin >> estadojuego;
 						cout << "Ingrese el numero de jugadores.\n";
-						cin << numjugadores;
+						cin >> numjugadores;
 						cout << "Ingrese el numero de serie del juego.\n";
 						cin >> numserie;
 						cout << "Ingrese el genero del juego.\n";
@@ -218,7 +220,7 @@ int main()
 						cin >> preciojuego;
 						for (int i = 0; i < ListaVideojuegos.size(); ++i)
 						{
-							if (numserie == ListaVideojuegos -> getNumSerie())
+							if (numserie == ListaVideojuegos.at(i) -> getNumSerie())
 							{
 								norepetido2 = false;
 							}
@@ -229,7 +231,7 @@ int main()
 							norepetido2 = true;
 							for (int i = 0; i < ListaVideojuegos.size(); ++i)
 							{
-								if (numserie == ListaVideojuegos[i] -> getNumSerie())
+								if (numserie == ListaVideojuegos.at(i) -> getNumSerie())
 								{
 									norepetido2 = false;
 								}
@@ -314,6 +316,7 @@ int main()
 					cout << "Numero invalido, ingrese su numero de nuevo!\n";
 					cin >> online1;
 				}
+
 			}
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 		} else {// Si es Vendedor
@@ -351,24 +354,21 @@ int main()
 		if (respuestaFinal == 'S' || respuestaFinal == 's')
 		{
 			respuesta1 = 1;
+
+			//Borrar vector de consolasMicrosoft
+			for (int i=0; i< Listaconsolas.size(); i++){
+		    	delete Listaconsolas[i];
+		  	}
+			Listaconsolas.clear();
+
+			//Borrar vector de consolasNintendo
+			for (int i=0; i< ListaVideojuegos.size(); i++){
+		    	delete ListaVideojuegos[i];
+		  	}
+			ListaVideojuegos.clear();
+
 		}
-
 	}
-
-	//Borrar punteros
-	delete consolaM;
-
-	//Borrar vector de consolasMicrosoft
-	for (int i=0; i< Listaconsolas.size(); i++){
-    	delete Listaconsolas[i];
-  	}
-	Listaconsolas.clear();
-
-	//Borrar vector de consolasNintendo
-	for (int i=0; i< ListaVideojuegos.size(); i++){
-    	delete ListaVideojuegos[i];
-  	}
-	ListaVideojuegos.clear();
 	
 	cout << "Nos vemos luego!\n";
 

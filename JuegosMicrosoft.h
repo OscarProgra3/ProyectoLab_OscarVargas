@@ -5,11 +5,11 @@
 
 using namespace std;
 
-class juegosMicrosoft : public Videojuegos
+class JuegosMicrosoft : public Videojuegos
 {
 	
 	public:
-		juegosMicrosoft(string, int, string, int, string, string, int, double);
+		JuegosMicrosoft(string, int, string, int, string, string, int, double);
 
 	
 };
