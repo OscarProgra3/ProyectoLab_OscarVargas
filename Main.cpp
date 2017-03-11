@@ -3,7 +3,7 @@
 #include <vector>
 #include <fstream>
 
-#include <direct> //mkdir
+#include <fstream> //PARA FICHEROS
 
 #include "Consolas.h"
 #include "Microsoft.h"
@@ -32,12 +32,6 @@ void funciondibujo();
 
 int main()
 {
-
-	//creando carpeta para el archivo binnario
-	
-	
-
-
 
 
 	Administrador* admin = new Administrador(); //Administrador predefinido
@@ -328,6 +322,10 @@ int main()
 				}
 
 			}
+
+
+
+
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 		} else {// Si es Vendedor
 			int online2 = 0;
@@ -341,11 +339,15 @@ int main()
 					cin>>opcv;
 
 					if (opcv==1)
-					{
+					{	
+						//AGREGAR A EL INVENTARIO
+
 						void funciondibujo();
 					}
 					if (opcv==2)
 					{
+
+
 						funcionvender();
 					}
 				}
@@ -390,6 +392,13 @@ int main()
 		return 0;*/
 }
 
+
+
+
+
+
+
+
 void funcionvender()
 {
 	cout<<"    ___\n   |[_]|\n   |+ ;| GAMEHUB\n   `---'\n";
@@ -398,36 +407,111 @@ void funcionvender()
 
 	cout<<"";
 
-	int respv=0;
-	while(respv!=3)
+	string respv="z";
+	while(respv!="s" || respv!="S")
 	{	 
+		cout<<endl;
 		cout<<"¿Que es lo que desea vender?\n";
-		cout<<"1.-Consolas\n2.-Videojuegos\n3.-Salir"<<endl;
+		cout<<"a.-Consolas\nb.-Videojuegos\n"<<endl;
 		cin>>respv;
-		if (respv==1)
+		if (respv=="a" || respv=="A")
 		{
- 	
+ 			
 
+
+
+
+
+			//vender consolas
  		}
-	 	if (respv==2)
+	 	if (respv=="b" || respv=="B")//si VENDER VIDEOJUEGOS
 	 	{
-	 		string respventavideo="o";
-	 		while(respventavideo=="s"||respventavideo=="S")
-	 		{
+	 		
 
+
+
+
+
+
+
+
+	 		/*
+	 		string nomvijuego;
+	 		cout<<"Nombre del videojuego: ";
+	 		cin>>nomvijuego;
+
+	 		int aniojuego;
+	 		cout<<"\nAño del videojuego";
+	 		cin>>aniojuego;
+
+	 		string consolavideojuego;
+	 		cout<<"Nombre del videojuego: ";
+	 		cin>>nomvijuego;
+
+
+
+
+
+	 		string respventavideo="o";
+	 		while(respventavideo!="s"||respventavideo!="S")
+	 		{
+	 			cout<<endl;
 	 			cout<<" De cual compañia desea el videojuego"<<endl;
 	 			cout<<"1.-Microsoft\n2.-Sony\n3.-Nintendo\n4.-Bandai\n5.-Konami\n6.-Square Enix\n7.-Electronic Arts\n8.-SEGA\n9.-Ubisoft\n ";
-
+			*/	
 
 
 	 			cout<<"¿Desea aregar otro videojuego?";
-	 			cin>>respventavideo;
+	 			cin>>respv;
 	 		}	
 	 	}
+
+	 	cout<<"¿Desea vender algo mas?(s/n)\n";
+	 	cin>>respv;
 	}
-}
+
 
 void funciondibujo()
 {
 	cout<<"**************BIENVENIDO******************\n";
+}
+
+
+
+void escribirbinario(Consolas* tlistaconsolas, Videojuegos* tlistavideojuegos){
+ //,vector <Videojuegos*> tlistavideojuegos
+
+	ofstream escritura;
+ 	vector <Consolas*> consola;
+	vector <Videojuegos*> videojuego;
+
+
+	escritura.open("/binario.bin", ios::binary|ios::app);	
+	escritura.write((char*)(tlistaconsolas),sizeof(consola));
+	escritura.write((char*)(tlistavideojuegos),sizeof(Videojuegos));
+	escritura.close();
+}
+
+
+void leer(){
+	ifstream entrada;
+
+	Consolas* consola;
+/*
+	vector <Consolas*> listconsola;
+	vector <Videojuegos*> listvideojuego;
+*/
+	entrada.open("/binario.bin", ios::binary|ios::app);
+	entrada.seekg(0,ios::end);//ir a el final del fichero
+	long longitudFichero=entrada.tellg();//Ver posicion para saber el tamaño
+	entrada.seekg(0, ios::beg);//volver a el principio
+ 
+	if(!entrada.good()) return;
+ 
+	for (int i = 0; i < (longitudFichero/sizeof(consola)); i++) {
+		entrada.read((char*)(&Listaconsolas),sizeof(Consola));
+		cout<<entrada.tellg();
+	//	cout<<cliente<<endl;
+	}
+	entrada.close();
 }

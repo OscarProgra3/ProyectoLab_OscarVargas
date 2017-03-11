@@ -1,0 +1,446 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"respvender"
+			],
+			[
+				"opc",
+				"opcvendedor"
+			],
+			[
+				"nom",
+				"nombreusuario"
+			],
+			[
+				"lis",
+				"listaconsolas"
+			],
+			[
+				"ma",
+				"main\tmain()"
+			],
+			[
+				"t",
+				"thoraentrada"
+			],
+			[
+				"p",
+				"pcontrasenia"
+			],
+			[
+				"precio",
+				"precio"
+			],
+			[
+				"n",
+				"numeroserie"
+			],
+			[
+				"Col",
+				"Consolas"
+			],
+			[
+				"peq",
+				"pequefn"
+			],
+			[
+				"i",
+				"idATM"
+			],
+			[
+				"c",
+				"codBanco"
+			],
+			[
+				"s",
+				"stark"
+			],
+			[
+				"ata",
+				"atack"
+			],
+			[
+				"ca",
+				"cantint"
+			],
+			[
+				"g",
+				"guardia"
+			],
+			[
+				"e",
+				"ejer"
+			],
+			[
+				"ge",
+				"guerrerov"
+			],
+			[
+				"can",
+				"cantinte"
+			],
+			[
+				"str",
+				"stark"
+			],
+			[
+				"edad",
+				"edad"
+			],
+			[
+				"C",
+				"colorca"
+			],
+			[
+				"de",
+				"defensa"
+			],
+			[
+				"no",
+				"nomca"
+			],
+			[
+				"d",
+				"dothraki"
+			],
+			[
+				"lema",
+				"lema"
+			],
+			[
+				"st",
+				"stark"
+			],
+			[
+				"guardiareal",
+				"guardiareal"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Main.cpp",
+			"settings":
+			{
+				"buffer_size": 14596,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/Main.cpp",
+		"/home/daniel/Documentos/Laberintoo/files.cpp",
+		"/home/daniel/Documentos/Laberintoo/laberinto.cpp",
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/Pieza.h",
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/PiezaAmarilla.cpp",
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/PiezaAmarilla.h",
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/PiezaAzul.cpp",
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/PiezaAzul.h",
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/PiezaRoja.cpp",
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/PiezaRoja.h",
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/PiezaVerde.cpp",
+		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/PiezaVerde.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Videojuegos.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Videojuegos.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Venta.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Venta.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSony.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSony.h",
+		"/home/daniel/Descargas/Clase7/main.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Main.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Consolas.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Nintendo.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Nintendo.h",
+		"/home/daniel/Descargas/Clase7/Empleado.cpp",
+		"/home/daniel/Descargas/Clase7/Empleado.h",
+		"/home/daniel/Descargas/Clase7/Persona.cpp",
+		"/home/daniel/Descargas/Clase7/Persona.h",
+		"/home/daniel/Documentos/Lab5_OscarVargas/Lab5_OscarVargas/main.cpp",
+		"/home/daniel/Documentos/Examenlab1_OscarVargas/Examenlab1_OscarVargas/main.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Microsoft.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Sony.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Sony.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Usuario.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Usuario.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Vendedor.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Vendedor.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Microsoft.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosUbisoft.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosBandai.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosBandai.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosElectronicArts.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosElectronicArts.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosKonami.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosKonami.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/JuegosMicrosoft.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/JuegosMicrosoft.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSquareEnix.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSquareEnix.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosUbisoft.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosNintendo.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosNintendo.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSega.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSega.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Consolas.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Administrador.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Administrador.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/makefile",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/JuegosMicrosoft.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosElectronicArts.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosElectronicArts.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSquareEnix.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSquareEnix.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosNintendo.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosNintendo.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosUbisoft.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosUbisoft.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosKonami.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosKonami.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosBandai.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosBandai.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSega.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSega.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSony.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSony.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/JuegosMicrosoft.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Videojuegos.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Videojuegos.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Administrador.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Administrador.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Main.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/makefile",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Man.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Microsoft.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Microsoft.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Nintendo.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Nintendo.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Sony.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Sony.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Usuario.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Usuario.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Vendedor.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Vendedor.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas/Administrador.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Consolas.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas_ChristianHenriquez/Consolas.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas/Vendedor.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas/Vendedor.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas/Administrador.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas/Usuario.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/ProyectoLab_OscarVargas/Usuario.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/Microsoft.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/Microsoft.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/Consolas.h",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/Consolas.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/JuegosMicrosoft.cpp",
+		"/home/daniel/Documentos/Proyecto1Lab_OscarVargas/JuegosMicrosoft.h",
+		"/home/daniel/Documentos/RPG/AtaqueEspecial.h",
+		"/home/daniel/Documentos/RPG/AtaqueEspecial.cpp",
+		"/home/daniel/Documentos/RPG/Ataque.h",
+		"/home/daniel/Documentos/RPG/Ataque.cpp",
+		"/home/daniel/Documentos/herencia/Persona.h",
+		"/home/daniel/Documentos/herencia/Persona.cpp",
+		"/home/daniel/Documentos/herencia/Empleado.h",
+		"/home/daniel/Documentos/herencia/persona.cpp",
+		"/home/daniel/Documentos/herencia/persona.h",
+		"/home/daniel/Documentos/Lab5_OscarVargas/Lab5_OscarVargas/funcion.h",
+		"/home/daniel/Documentos/Examenlab1_OscarVargas/Examenlab1_OscarVargas/pequefn.cpp",
+		"/home/daniel/Documentos/Examenlab1_OscarVargas/Examenlab1_OscarVargas/pequefn.h",
+		"/home/daniel/Documentos/Examenlab1_OscarVargas/Examenlab1_OscarVargas/stark.cpp",
+		"/home/daniel/Documentos/Examenlab1_OscarVargas/Examenlab1_OscarVargas/stark.h",
+		"/home/daniel/Documentos/sobrecargadeoperadores/sobrecarga.cpp",
+		"/home/daniel/Documentos/Sobrecarga Operadores/Integer.cpp",
+		"/home/daniel/Documentos/Sobrecarga Operadores/Integer.h",
+		"/home/daniel/Documentos/ATM/main.cpp",
+		"/home/daniel/Documentos/ATM/atm.h",
+		"/home/daniel/Documentos/ATM/atm.cpp",
+		"/home/daniel/Documentos/Examenlab1_OscarVargas/Examenlab1_OscarVargas",
+		"/home/daniel/Documentos/ATM/Atm.cpp"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Main.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
