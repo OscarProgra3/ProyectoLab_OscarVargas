@@ -127,7 +127,7 @@
 			"file": "Main.cpp",
 			"settings":
 			{
-				"buffer_size": 14596,
+				"buffer_size": 25770,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -140,12 +140,12 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 404.0
 	},
 	"console":
 	{
@@ -163,8 +163,14 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/home/daniel/Documentos/proyecto",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez"
+	],
 	"file_history":
 	[
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Main.cpp",
 		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/Main.cpp",
 		"/home/daniel/Documentos/Laberintoo/files.cpp",
 		"/home/daniel/Documentos/Laberintoo/laberinto.cpp",
@@ -184,7 +190,6 @@
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSony.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSony.h",
 		"/home/daniel/Descargas/Clase7/main.cpp",
-		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Main.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Consolas.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Nintendo.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Nintendo.h",
@@ -336,20 +341,21 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14596,
+						"buffer_size": 25770,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								16679,
+								16679
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -435,7 +441,7 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 150.0,
