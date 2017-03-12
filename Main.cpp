@@ -29,7 +29,8 @@ using namespace std;
 
 void funcionvender();
 void funciondibujo();
-
+void funcionListarJuego(vector<Videojuegos*>);
+void funcionListarConsola(vector<Consolas*>);
 
 int main()
 {
@@ -613,24 +614,120 @@ int main()
 						}
 
 					} else {//Modificar Videojuego
+						cout << "Cual videojuego desea modificar?\n";
+						for (int i = 0; i < ListaVideojuegos.size(); ++i)
+						{
+							cout << i << ") " << (ListaVideojuegos.at(i) -> getNombre()) << endl;
+						}
+						int juegomodificar;
+						cin >> juegomodificar;
+						while (juegomodificar < 0 || juegomodificar > ListaVideojuegos.size()) {
+							cout << "Numero invalido, ingrese su numero de nuevo!\n";
+							cin >> juegomodificar;
+						}
+						cout << "Que desea modificar!\n";
+						cout << "1) Nombre\n";
+						cout << "2) Año de salida\n";
+						cout << "3) Consola\n";
+						cout << "4) Numero de jugadores\n";
+						cout << "5) Genero del juego\n";
+						cout << "6) Estado del juego\n";
+						cout << "7) Numero de serie\n";
+						cout << "8) Precio del juego\n";
+						int respuestamodificar3;
+						cin >> respuestamodificar3;
+						while(respuestamodificar3 < 1 || respuestamodificar3 > 8) {
+							cout << "Numero invalido, ingrese su numero de nuevo!\n";
+							cin >> respuestamodificar3;
+						}
 
+						if (respuestamodificar3 == 1)
+						{//Modificar el nombre
+							string nombreTemp2;
+							cout << "Ingrese el nuevo nombre del juego: " << endl;
+							cin >> nombreTemp2;
+							ListaVideojuegos.at(juegomodificar) -> setNombre(nombreTemp2);
+							cout << "Nombre modificado exitosamente!" << endl;
+						} else if (respuestamodificar3 == 2)
+						{//Modificar el año de salida
+							int aniodesalida3;
+							cout << "Ingrese el nuevo año de salida: " << endl;
+							cin >> aniodesalida3;
+							ListaVideojuegos.at(juegomodificar) -> setAnio(aniodesalida3);
+							cout << "Año de salida modificado exitosamente!" << endl;
+						} else if (respuestamodificar3 == 3)
+						{//Modificar la consola
+							string consolaTemp;
+							cout << "Ingrese la consola nueva: " << endl;
+							cin >> consolaTemp;
+							ListaVideojuegos.at(juegomodificar) -> setConsola(consolaTemp);
+							cout << "Consola modificada exitosamente!" << endl;
+						} else if (respuestamodificar3 == 4)
+						{//Modificar el numero de jugadores
+							int numdejug;
+							cout << "Ingrese el nuevo numero de jugadores: " << endl;
+							cin >> numdejug;
+							ListaVideojuegos.at(juegomodificar) -> setNumjugadores(numdejug);
+							cout << "Numero de jugadores modificado exitosamente!" << endl;
+						} else if (respuestamodificar3 == 5)
+						{//Modificar el genero del juego
+							string generoTemp;
+							cout << "Ingrese el nuevo genero: " << endl;
+							cin >> generoTemp;
+							ListaVideojuegos.at(juegomodificar) -> setGenero(generoTemp);
+							cout << "Genero modificado exitosamente!" << endl;
+						} else if (respuestamodificar3 == 6)
+						{//Modificar el estado del juego
+							string estadojuegoT;
+							cout << "Ingrese el nuevo estado: " << endl;
+							cin >> estadojuegoT;
+							ListaVideojuegos.at(juegomodificar) -> setEstado(estadojuegoT);
+							cout << "Estado modificado exitosamente!" << endl;
+						} else if (respuestamodificar3 == 7)
+						{//Modificar el numero de serie
+							bool norepetido3 = false;
+							int numdeserieT;
+							cout << "Ingrese el numero de serie: " << endl;
+							cin >> numdeserieT;
+							for (int i = 0; i < ListaVideojuegos.size(); ++i)
+							{
+								if (norepetido3 == ListaVideojuegos.at(i) -> getNumSerie())
+								{
+									norepetido3 = false;
+								}
+							}
+							while(norepetido3 == false) {
+								cout << "Numero de serie repetido, ingrese el numero de serie de nuevo!\n";
+								cin >> numdeserieT;
+								norepetido3 = true;
+								for (int i = 0; i < ListaVideojuegos.size(); ++i)
+								{
+									if (norepetido3 == ListaVideojuegos.at(i) -> getNumSerie())
+									{
+										norepetido3 = false;
+									}
+								}
+							}
+							ListaVideojuegos.at(juegomodificar) -> setNumSerie(numdeserieT);
+							cout << "Numero de serie modificado exitosamente!" << endl;
+						} else {//Modificar el precio
+							int precioT;
+							cout << "Ingrese el nuevo precio: " << endl;
+							cin >> precioT;
+							ListaVideojuegos.at(juegomodificar) -> setPrecio(precioT);
+							cout << "Precio modificado exitosamente!" << endl;
+						}
 					}
 
 					cout << endl;
 
 				} else if(respuesta3 == 3) { //Eliminar
 
-				} else {
+				} else {//Listar
 					cout << "Consolas: \n";
-					for (int i = 0; i < Listaconsolas.size(); ++i)
-					{
-						cout << i << ") " << (Listaconsolas.at(i) -> getModelo()) << endl;
-					}
+					funcionListarConsola(Listaconsolas);
 					cout << "Videojuegos: \n";
-					for (int i = 0; i < ListaVideojuegos.size(); ++i)
-					{
-						cout << i << ") " << (ListaVideojuegos.at(i) -> getNombre()) << endl;
-					}
+					funcionListarJuego(ListaVideojuegos);
 					cout << endl;
 				}
 				cout << "Desea salir de su cuenta administrador? 1 = Salir 0 = No salir\n";
@@ -836,4 +933,33 @@ void leer(){
 	//	cout<<cliente<<endl;
 	}
 	entrada.close();
+}
+
+void funcionListarConsola(vector<Consolas*> ListaconsolasT) {
+	for (int i = 0; i < ListaconsolasT.size(); ++i)
+	{
+		cout << "Consola numero: " << (i+1) << endl;
+		cout << "El año de salida es: " << ListaconsolasT.at(i) -> getAniosalida() << endl;
+		cout << "El modelo es: " << ListaconsolasT.at(i) -> getModelo() << endl;
+		cout << "El estado en el que esta es: " << ListaconsolasT.at(i) -> getEstado() << endl;
+		cout << "El numero de serie es: " << ListaconsolasT.at(i) -> getNumeroSerie() << endl;
+		cout << "El precio es de: " << ListaconsolasT.at(i) -> getPrecio() << endl;
+		cout << "----------------------------------------------" << endl;
+	}
+}
+
+void funcionListarJuego(vector<Videojuegos*> ListaVideojuegosT) {
+	for (int i = 0; i < ListaVideojuegosT.size(); ++i)
+	{
+		cout << "Videojuego numero: " << (i+1) << endl;
+		cout << "El nombre del videojuego es: " << ListaVideojuegosT.at(i) -> getNombre() << endl;
+		cout << "El año en el que salio es: " << ListaVideojuegosT.at(i) -> getAnio() << endl;
+		cout << "La consola del videojuego es: " << ListaVideojuegosT.at(i) -> getConsola() << endl;
+		cout << "El numero de jugadores es de: " << ListaVideojuegosT.at(i) -> getNumjugadores() << endl;
+		cout << "El genero del juego es: " << ListaVideojuegosT.at(i) -> getGenero() << endl;
+		cout << "El estado del juego es: " << ListaVideojuegosT.at(i) -> getEstado() << endl;
+		cout << "El numero de serie: " << ListaVideojuegosT.at(i) -> getNumSerie() << endl;
+		cout << "El precio es de: " << ListaVideojuegosT.at(i) -> getPrecio() << endl;
+		cout << "----------------------------------------------------" << endl;
+	}
 }

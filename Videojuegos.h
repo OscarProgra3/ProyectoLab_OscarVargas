@@ -25,7 +25,6 @@ class Videojuegos
 		int getAnio();
 		void setAnio(int);
 
-
 		string getConsola();
 		void setConsola(string);
 
@@ -41,11 +40,8 @@ class Videojuegos
 		int getNumSerie();
 		void setNumSerie(int);
 
-
 		double getPrecio();
 		void setPrecio(double);
-		
-		
 };
 
 #endif
