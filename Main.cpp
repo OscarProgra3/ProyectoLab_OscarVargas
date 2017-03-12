@@ -33,7 +33,7 @@
 
 using namespace std;
 
-void funcionvender();
+void funcionvender(int cantartvend,double dinerogenerado,vector <Videojuegos*> ListaVideojuegosT);
 void funcionAgregar(vector<Consolas*> Listaconsolas, vector<Videojuegos*> ListaVideojuegos);
 void funciondibujo();
 
@@ -60,136 +60,141 @@ int main()
 	Administrador* admin = new Administrador(); //Administrador predefinido
 	int respuesta1 = 0;
 
-		vector<Microsoft*> consolasMicrosoft;
-		vector<Nintendo*> consolasNintendo;
-		vector<Sony*> consolasSony;
-
+	vector<Microsoft*> consolasMicrosoft;
+	vector<Nintendo*> consolasNintendo;
+	vector<Sony*> consolasSony;
+	while(respuesta1!=1){
 		cout << "Bienvenido a GAMEHUB\n";
 		cout << "Como desea entrar?\n";
 		cout << "1) Entrar como Administrador\n";
 		cout << "2) Entrar como Vendedor\n";
 		int respuesta2;
 		cin >> respuesta2;
-		while(respuesta2 < 1 || respuesta2 > 2) {
+
+
+		while(respuesta2 < 1 || respuesta2 > 2)
+		{
 			cout << "Numero invalido, ingrese su numero de nuevo!\n";
 			cin >> respuesta2;
 		}
 
+
 		if (respuesta2 == 1)
 		{//Si es administrador
-			//Identificar si es el admin
-			bool identificar;
-			cout << "Ingrese el nombre de usuario: \n";
-			string nombreTemp;
-			cin >> nombreTemp;
-			cout << "Ingrese la contraseña: \n";
-			string contraseniaTemp;
-			cin >> contraseniaTemp;
-			if (nombreTemp == admin -> getNombre() && contraseniaTemp == admin -> getContrasenia())
-			{//Se hace true si el nombre y la contrseña son iguales a las del admin
-				identificar = true;
-			} else {//Se hace false si una de las dos es diferente
-				identificar = false;
-				cout << "Nombre o Contraseña incorrecta!\n";
-			}
 
-			int online1 = 0;
-			while(online1 == 0 && identificar == true) {
-				cout << "Bienvenido Administrador!\n";
-				cout << "Que desea hacer?\n";
-				cout << "1) Agregar\n";
-				cout << "2) Modificar\n";
-				cout << "3) Eliminar\n";
-				cout << "4) Listar\n";
-				int respuesta3;
+		//Identificar si es el admin
+		bool identificar;
+		cout << "Ingrese el nombre de usuario: \n";
+		string nombreTemp;
+		cin >> nombreTemp;
+		cout << "Ingrese la contraseña: \n";
+		string contraseniaTemp;
+		cin >> contraseniaTemp;
+		if (nombreTemp == admin -> getNombre() && contraseniaTemp == admin -> getContrasenia())
+		{//Se hace true si el nombre y la contrseña son iguales a las del admin
+			identificar = true;
+		} else
+		{//Se hace false si una de las dos es diferente
+			identificar = false;
+			cout << "Nombre o Contraseña incorrecta!\n";
+		}
+
+		int online1 = 0;
+		while(online1 == 0 && identificar == true) {
+			cout << "Bienvenido Administrador!\n";
+			cout << "Que desea hacer?\n";
+			cout << "1) Agregar\n";
+			cout << "2) Modificar\n";
+			cout << "3) Eliminar\n";
+			cout << "4) Listar\n";
+			int respuesta3;
+			cin >> respuesta3;
+			while(respuesta3 < 1 || respuesta3 > 4) {
+				cout << "Numero invalido, ingrese su numero de nuevo!\n";
 				cin >> respuesta3;
-				while(respuesta3 < 1 || respuesta3 > 4) {
+			}
+			if (respuesta3 == 1)
+			{ //Agregar
+				cout << "Que desea agregar?\n";
+				cout << "1) Consola\n";
+				cout << "2) Videojuego\n";
+				int respuesta4;
+				cin >> respuesta4;
+				while(respuesta4 < 1 || respuesta4 > 3) {
 					cout << "Numero invalido, ingrese su numero de nuevo!\n";
-					cin >> respuesta3;
-				}
-				if (respuesta3 == 1)
-				{ //Agregar
-					cout << "Que desea agregar?\n";
-					cout << "1) Consola\n";
-					cout << "2) Videojuego\n";
-					int respuesta4;
 					cin >> respuesta4;
-					while(respuesta4 < 1 || respuesta4 > 2) {
-						cout << "Numero invalido, ingrese su numero de nuevo!\n";
-						cin >> respuesta4;
-					}
+				}
 
-					if (respuesta4 == 1) //Agregar Consola
+				if (respuesta4 == 1) //Agregar Consola
+				{
+					bool norepetido = true;
+					int aniodesalida;
+					string modelodeconsola;
+					string estadodeconsola;
+					int numerodeserie;
+					double preciodeconsola;
+
+					cout << "Ingrese el año de salida de la consola.\n";
+					cin >> aniodesalida;
+					cout << "Ingrese el estado de la consola.\n";
+					cin >> estadodeconsola;
+					cout << "Ingrese el numero de serie de la consola.\n";
+					cin >> numerodeserie;
+					for (int i = 0; i < Listaconsolas.size(); ++i)
 					{
-						bool norepetido = true;
-
-						int aniodesalida;
-						string modelodeconsola;
-						string estadodeconsola;
-						int numerodeserie;
-						double preciodeconsola;
-
-						cout << "Ingrese el año de salida de la consola.\n";
-						cin >> aniodesalida;
-						cout << "Ingrese el estado de la consola.\n";
-						cin >> estadodeconsola;
-						cout << "Ingrese el numero de serie de la consola.\n";
+						if (numerodeserie == Listaconsolas.at(i) -> getNumeroSerie())
+						{
+							norepetido = false;
+						}
+					}
+					while(norepetido == false) {
+						cout << "Numero de serie repetido, ingrese el numero de serie de nuevo!\n";
 						cin >> numerodeserie;
+						norepetido = true;
 						for (int i = 0; i < Listaconsolas.size(); ++i)
 						{
-							if (numerodeserie == Listaconsolas.at(i) -> getNumeroSerie())
+							if (numerodeserie == Listaconsolas[i] -> getNumeroSerie())
 							{
 								norepetido = false;
 							}
 						}
-						while(norepetido == false) {
-							cout << "Numero de serie repetido, ingrese el numero de serie de nuevo!\n";
-							cin >> numerodeserie;
-							norepetido = true;
-							for (int i = 0; i < Listaconsolas.size(); ++i)
-							{
-								if (numerodeserie == Listaconsolas[i] -> getNumeroSerie())
-								{
-									norepetido = false;
-								}
-							}
-						}
-						cout << "Ingrese el precio de la Consola: \n";
-						cin >> preciodeconsola;
+					}
+					cout << "Ingrese el precio de la Consola: \n";
+					cin >> preciodeconsola;
 
-						cout << "De que compañia es la consola?\n";
-						cout << "1) Microsoft\n";
-						cout << "2) Nintendo\n";
-						cout << "3) Sony\n";
-						int respuesta5;
+					cout << "De que compañia es la consola?\n";
+					cout << "1) Microsoft\n";
+					cout << "2) Nintendo\n";
+					cout << "3) Sony\n";
+					int respuesta5;
+					cin >> respuesta5;
+					while(respuesta5 < 1 || respuesta5 > 3) {
+						cout << "Numero invalido, ingrese su numero de nuevo!\n";
 						cin >> respuesta5;
-						while(respuesta5 < 1 || respuesta5 > 3) {
+					}
+					if (respuesta5 == 1)
+					{//Agregando consola de microsoft
+						cout << "Escoga el modelo de la consola: \n";
+						cout << "1) Xbox\n";
+						cout << "2) Xbox 360\n";
+						cout << "3) Xbox One\n";
+						int respuestamodelo;
+						cin >> respuestamodelo;
+						while(respuestamodelo < 1 || respuestamodelo > 3) {
 							cout << "Numero invalido, ingrese su numero de nuevo!\n";
-							cin >> respuesta5;
-						}
-						if (respuesta5 == 1)
-						{//Agregando consola de microsoft
-							cout << "Escoga el modelo de la consola: \n";
-							cout << "1) Xbox\n";
-							cout << "2) Xbox 360\n";
-							cout << "3) Xbox One\n";
-							int respuestamodelo;
 							cin >> respuestamodelo;
-							while(respuestamodelo < 1 || respuestamodelo > 3) {
-								cout << "Numero invalido, ingrese su numero de nuevo!\n";
-								cin >> respuestamodelo;
-							}
-							if (respuestamodelo == 1) //Mira el modelo de la consola
-							{
-								modelodeconsola = "Xbox";
-							} else if (respuestamodelo == 2)
-							{
-								modelodeconsola = "Xbox 360";
-							} else {
-								modelodeconsola = "Xbox One";
-							}
-							Listaconsolas.push_back(new Microsoft(aniodesalida, modelodeconsola, estadodeconsola, numerodeserie, preciodeconsola));
-							cout << "Consola agregada exitosamente!\n";
+						}
+						if (respuestamodelo == 1) //Mira el modelo de la consola
+						{
+							modelodeconsola = "Xbox";
+						} else if (respuestamodelo == 2)
+						{
+							modelodeconsola = "Xbox 360";
+						} else {
+							modelodeconsola = "Xbox One";
+						}
+						Listaconsolas.push_back(new Microsoft(aniodesalida, modelodeconsola, estadodeconsola, numerodeserie, preciodeconsola));
+						cout << "Consola agregada exitosamente!\n";
 						} else if (respuesta5 == 2)
 						{//Agregar consola de nintendo
 
@@ -260,7 +265,8 @@ int main()
 
 							Listaconsolas.push_back(new Nintendo(aniodesalida, modelodeconsola, estadodeconsola, numerodeserie, preciodeconsola));
 							cout << "Consola agregada exitosamente!\n";
-						} else {//Agregar consola de sony
+						} else
+						{//Agregar consola de sony
 
 							cout << "Escoga el modelo de la consola: \n";
 							cout << "1) Play Station 1\n";
@@ -299,7 +305,8 @@ int main()
 						}
 						cout << endl;
 
-					} else { //Agregar Videojuegos
+					} else
+					{ //Agregar Videojuegos
 
 						bool norepetido2 = true;
 
@@ -760,35 +767,45 @@ int main()
 
 
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
-		} else {// Si es Vendedor
+		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+		
+		} else
+		{// Si es Vendedor
 			cout<<endl;
+			string horaentrada=hora();
+			cout<<"hora de ingreso"<< horaentrada;
 			string nombrevendedor;
-			cout<<"Me podria escribir su nombre: ";
+			cout<<"Me podria escribir su nombre vendedor: ";
 			cin>>nombrevendedor;
 
+			Vendedor* vendedor;
 
-
+			
 			int online2 = 0;
 			while(online2 == 0)
 			{
+				int cantartvend=0;//cantidad de articulos vendidos
+				double dinerogenerado=0.0;
+				
+
 				int opcvendedor=0;
 				while(opcvendedor!=3)
 				{
-					int opcv=0;
-					cout<<"Bienvenido vendedor\n ¿Que es lo que desea realizar?\n1.-Agregar a el inventario\n2.-Vender\n3.-Sair\nIngrese su opcion: ";
-					cin>>opcv;
-
-					if (opcv==1)
-					{//AGREGAR A EL INVENTARIO	
-						funcionAgregar(Listaconsolas, ListaVideojuegos);
-					}//
-					if (opcv==2)
-					{
-						escribirbinario(Listaconsolas, ListaVideojuegos);
-						//funcionvender();
-					}
+					
 					cout<<"Bienvenido vendedor\n ¿Que es lo que desea realizar?\n1.-Agregar a el inventario\n2.-Vender\n3.-Sair\nIngrese su opcion: ";
 					cin>>opcvendedor;
+					if (opcvendedor==1)
+					{//AGREGAR A EL INVENTARIO	
+						funcionAgregar(Listaconsolas, ListaVideojuegos);
+					}//vender
+					if (opcvendedor==2)
+					{		
+						cout << endl;
+						
+						funcionvender(cantartvend,dinerogenerado,ListaVideojuegos);
+						string horasalida=hora();
+					}
 				}
 				cout << "Desea salir? 1 = Salir 0 = No salir\n";
 				cin >> online2;
@@ -806,6 +823,7 @@ int main()
 		if (respuestaFinal == 'S' || respuestaFinal == 's')
 		{
 			respuesta1 = 1;
+			escribirbinario(Listaconsolas, ListaVideojuegos);
 
 			//Borrar vector de consolasMicrosoft
 			for (int i=0; i< Listaconsolas.size(); i++){
@@ -819,25 +837,56 @@ int main()
 		  	}
 			ListaVideojuegos.clear();
 
+		}else{
+			respuesta1=0;
 		}
 		cout << endl;
-		
 	}
-	
-	//cout << "Nos vemos luego!\n";
-
+}
 	/*Nintendo* nin=new Nintendo(2017,"Sega","bueno",111,15.30);
-
+	
 	//nin->{};
 	cout<< "\nYOLOYOLOYOLOYOLOYOLO"<<endl;
 	cout<<nin->getModelo()<<"ESOOOOOO"<<endl;
 		return 0;*/
 	//}
+void funcionvender(int cantartvend,double dinerogenerado,vector <Videojuegos*> ListaVideojuegosT)
+{
+	cout<<"    ___\n   |[_]|\n   |+ ;| GAMEHUB\n   `---'\n";
+	cout<<"\n      Bienvenido vendedor\n";
+	cout<<endl;
 
+	int respv=5;
+	while(respv!=3)
+	{	 
+		cout<<endl;
+		cout<<"¿Que es lo que desea vender?\n";
+		cout<<"1.-Consolas\n2.-Videojuegos\n3.-no vender nada"<<endl;
+		cin>>respv;//respuesta venta
+		if (respv==1)
+		{//vender consolas
+							
+			cantartvend++;
+ 		}
+	 	if (respv==2)
+	 	{//si VENDER VIDEOJUEGOS
+	 	
+ 			for (int i = 0; i < ListaVideojuegosT.size(); ++i)
+			{
+				
+				cout << "opcion"<<i<<endl;
+				cout << "El nombre del videojuego es: " << ListaVideojuegosT.at(i) -> getNombre() << endl;
+				cout << "El precio es de: " << ListaVideojuegosT.at(i) -> getPrecio() << endl;					
+				cout << "----------------------------------------------------" << endl;
+			}
+			cout<<"que viva las drogas";
+	 	}		
+	}
+}
 
 void funcionAgregar(vector<Consolas*> Listaconsolas, vector<Videojuegos*> ListaVideojuegos){
 	cout << endl<<endl;
-	cout << "Que desea agregar?\n";
+	cout << "¿Que desea agregar?\n";
 	cout << "1) Consola\n";
 	cout << "2) Videojuego\n";
 	int respuesta4;
@@ -1130,6 +1179,8 @@ void funcionAgregar(vector<Consolas*> Listaconsolas, vector<Videojuegos*> ListaV
 							cout << "Juego agregado exitosamente!\n";
 		} else { //Agregar juego de ubisoft
 			ListaVideojuegos.push_back(new juegosUbisoft(nombrejuego, aniodesalida2, consoladeljuego, numjugadores, genero, estadojuego, numserie, preciojuego));
+			
+
 			cout << "Juego agregado exitosamente!\n";
 		}
 		cout << endl;
@@ -1159,74 +1210,10 @@ string hora()
 {
 	time_t tAct = time(0);
 	string horaaentrada=asctime(localtime(&tAct));
-
-
 	return horaaentrada;
 }
 
-void funcionvender()
-{
-	
-	cout<<"    ___\n   |[_]|\n   |+ ;| GAMEHUB\n   `---'\n";
 
-	 
-	cout<<"\n      Bienvenido vendedor\n";
-
-	cout<<"";
-
-	string respv="z";
-	while(respv!="s" || respv!="S")
-	{	 
-		cout<<endl;
-		cout<<"¿Que es lo que desea vender?\n";
-		cout<<"a.-Consolas\nb.-Videojuegos\n"<<endl;
-		cin>>respv;
-		if (respv=="a" || respv=="A")
-		{
- 			
-
-
-			//vender consolas
- 		}
-	 	if (respv=="b" || respv=="B")//si VENDER VIDEOJUEGOS
-	 	{
-	 		
-
-
-	 		/*
-	 		string nomvijuego;
-	 		cout<<"Nombre del videojuego: ";
-	 		cin>>nomvijuego;
-
-	 		int aniojuego;
-	 		cout<<"\nAño del videojuego";
-	 		cin>>aniojuego;
-
-	 		string consolavideojuego;
-	 		cout<<"Nombre del videojuego: ";
-	 		cin>>nomvijuego;
-
-
-
-
-
-	 		string respventavideo="o";
-	 		while(respventavideo!="s"||respventavideo!="S")
-	 		{
-	 			cout<<endl;
-	 			cout<<" De cual compañia desea el videojuego"<<endl;
-	 			cout<<"1.-Microsoft\n2.-Sony\n3.-Nintendo\n4.-Bandai\n5.-Konami\n6.-Square Enix\n7.-Electronic Arts\n8.-SEGA\n9.-Ubisoft\n ";
-			*/	
-
-
-	 			cout<<"¿Desea aregar otro videojuego?";
-	 			cin>>respv;
-	 		}		
-	 	}
-
-	 	cout<<"¿Desea vender algo mas?(s/n)\n";
-	 	cin>>respv;
-	}
 
 
 void funciondibujo()
