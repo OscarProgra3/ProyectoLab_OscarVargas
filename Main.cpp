@@ -722,7 +722,21 @@ int main()
 					cout << endl;
 
 				} else if(respuesta3 == 3) { //Eliminar
+					cout << "Que desea eliminar?" << endl;
+					cout << "1) Consola" << endl;
+					cout << "2) Videojuego" << endl;
+					int anseliminar;
+					cin >> anseliminar;
+					while (anseliminar < 1 || anseliminar > 2) {
+						cout << "Numero invalido! Ingrese numero de nuevo!" << endl;
+						cin >> anseliminar;
+					}
+					if (anseliminar == 1)
+					{
+						
+					} else {
 
+					}
 				} else {//Listar
 					cout << "Consolas: \n";
 					funcionListarConsola(Listaconsolas);
