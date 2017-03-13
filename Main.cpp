@@ -1614,15 +1614,15 @@ int main()
 			respuesta1 = 1;
 			escribirbinario(Listaconsolas, ListaVideojuegos);
 
-			//Borrar vector de consolasMicrosoft
+			//Borrar vector de consolas
 			for (int i=0; i< Listaconsolas.size(); i++){
-		    	delete Listaconsolas[i];
+		    	Listaconsolas.erase(Listaconsolas.begin() + i);
 		  	}
 			Listaconsolas.clear();
 
-			//Borrar vector de consolasNintendo
+			//Borrar vector de videojuegos
 			for (int i=0; i< ListaVideojuegos.size(); i++){
-		    	delete ListaVideojuegos[i];
+		    	ListaVideojuegos.erase(ListaVideojuegos.begin() + i);
 		  	}
 			ListaVideojuegos.clear();
 
@@ -1900,4 +1900,15 @@ void imprimirVenta(Venta* venta)
 	salida << "Total: " << total << endl;
 	salida.close();
 
+	for (int i = 0; i < listaconsolasTe.size(); ++i)
+	{
+		listaconsolasTe.erase(listaconsolasTe.begin() + i);
+	}
+	listaconsolasTe.clear();
+
+	for (int i = 0; i < listavideojuegosTe.size(); ++i)
+	{
+		listavideojuegosTe.erase(listavideojuegosTe.begin() + i);
+	}
+	listavideojuegosTe.clear();
 }
