@@ -2,7 +2,7 @@
 #define VIDEOJUEGOS_H
 #include <string>
 using namespace std;
-#include <boost/serialization/base_object.hpp> 
+//#include <boost/serialization/base_object.hpp> 
 
 class Videojuegos
 {

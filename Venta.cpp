@@ -43,7 +43,7 @@ int Venta::getTamJuegos()
 
 vector <Videojuegos*>  Venta::getListavideojuegos(int num)
 {
-	return listavideojuegos.at(num);
+	return listavideojuegos.at(num)	;
 }
 void Venta::setListavideojuegos(vector <Videojuegos*>  e)
 {
