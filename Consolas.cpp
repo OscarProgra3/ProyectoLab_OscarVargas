@@ -61,10 +61,3 @@ void Consolas::setPrecio(double tprecio)
 {
 	precio=tprecio;
 }
-
-
-
-
-
-
-
