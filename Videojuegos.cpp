@@ -14,6 +14,12 @@ Videojuegos::Videojuegos(string pnombre, int panio, string pconsola, int pnumjud
 		this-> precio=pprecio;
 }
 
+Videojuegos::Videojuegos(Videojuegos* juego)
+{
+	juego=juego;
+}
+
+
 string Videojuegos::getNombre()
 {
 	return nombre;

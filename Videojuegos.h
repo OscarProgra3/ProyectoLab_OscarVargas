@@ -19,7 +19,9 @@ class Videojuegos
 
 	public:
 		Videojuegos(string, int, string,int,  string,string, int, double);
-		
+		Videojuegos(Videojuegos* juego);
+
+
 		string getNombre();
 		void setNombre(string);
 

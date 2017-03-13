@@ -16,6 +16,10 @@ Consolas::Consolas(int paniosalida, string pmodelo,
 	this -> precio=pprecio;
 }
 
+Consolas::Consolas(Consolas* consola)
+{
+	consola=consola;
+}
 
 int Consolas::getAniosalida()
 {
@@ -61,6 +65,8 @@ void Consolas::setPrecio(double tprecio)
 {
 	precio=tprecio;
 }
+
+
 
 
 

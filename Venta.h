@@ -25,11 +25,15 @@ class Venta
 		string getNombrecliente();
 		void setNombrecliente(string);
 
-		Consolas* getListaconsolas(int);
-		void setListaconsolas(Consolas*); 
+		vector <Consolas*> getListaconsolas(int);
+		void setListaconsolas(vector <Consolas*>); 
+
+		int getTamConsola();
 	
-		Videojuegos* getListavideojuegos(int);
-		void setListavideojuegos(Videojuegos*);
+		vector <Videojuegos*> getListavideojuegos(int);
+		void setListavideojuegos(vector <Videojuegos*> );
+
+		int getTamJuegos();
 
 		string getHorafinalizacion();
 		void setHorafinalizacion(string);

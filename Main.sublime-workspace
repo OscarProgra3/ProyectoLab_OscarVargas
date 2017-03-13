@@ -4,20 +4,120 @@
 		"selected_items":
 		[
 			[
+				"im",
+				"imprimirVenta"
+			],
+			[
+				"gettam",
+				"getTamJuegos"
+			],
+			[
+				"lis",
+				"listavideojuegos"
+			],
+			[
+				"jueg",
+				"juegosvendidos"
+			],
+			[
+				"get",
+				"getPrecio"
+			],
+			[
+				"hora",
+				"horafinalizacion"
+			],
+			[
+				"L",
+				"ListaVideojuegosT"
+			],
+			[
+				"Nom",
+				"nomcli"
+			],
+			[
+				"juego",
+				"juegost"
+			],
+			[
+				"ListaJ",
+				"ListaVideojuegosT"
+			],
+			[
+				"conso",
+				"consolat"
+			],
+			[
+				"consolas",
+				"consolasvendidas"
+			],
+			[
+				"Listacons",
+				"ListaconsolasT"
+			],
+			[
+				"S",
+				"S"
+			],
+			[
+				"Lis",
+				"ListaconsolasT"
+			],
+			[
+				"opc",
+				"opcconsola"
+			],
+			[
+				"li",
+				"Listaconsolas"
+			],
+			[
+				"no",
+				"nombrevendedor"
+			],
+			[
+				"Hor",
+				"horaactual"
+			],
+			[
+				"l",
+				"listavideojuegos"
+			],
+			[
+				"si",
+				"sizeof"
+			],
+			[
+				"es",
+				"escritura"
+			],
+			[
+				"lIS",
+				"listvideojuego"
+			],
+			[
+				"escr",
+				"escribirbinario"
+			],
+			[
+				"ho",
+				"hora"
+			],
+			[
+				"int",
+				"IntToString"
+			],
+			[
+				"fun",
+				"funcionAgregar"
+			],
+			[
 				"re",
 				"respvender"
 			],
 			[
-				"opc",
-				"opcvendedor"
-			],
-			[
 				"nom",
 				"nombreusuario"
-			],
-			[
-				"lis",
-				"listaconsolas"
 			],
 			[
 				"ma",
@@ -100,10 +200,6 @@
 				"defensa"
 			],
 			[
-				"no",
-				"nomca"
-			],
-			[
 				"d",
 				"dothraki"
 			],
@@ -127,7 +223,24 @@
 			"file": "Main.cpp",
 			"settings":
 			{
-				"buffer_size": 25770,
+				"buffer_size": 51169,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Venta.cpp",
+			"settings":
+			{
+				"buffer_size": 1409,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Venta.h",
+			"settings":
+			{
+				"buffer_size": 916,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -166,10 +279,19 @@
 	"expanded_folders":
 	[
 		"/home/daniel/Documentos/proyecto",
-		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez"
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/log_ventas"
 	],
 	"file_history":
 	[
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Venta.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/log_ventas/Sun Mar 12 17:30:18 2017\n.log",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/log_ventas/.log",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/binario.bin",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Usuario.h",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Vendedor.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/JuegosMicrosoft.cpp",
+		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Consolas.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Main.cpp",
 		"/home/daniel/Documentos/Lab7_Oscar-Isaias/Grupo-1_NoTeEnojes/Main.cpp",
 		"/home/daniel/Documentos/Laberintoo/files.cpp",
@@ -186,11 +308,9 @@
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Videojuegos.h",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Videojuegos.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Venta.h",
-		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Venta.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSony.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSony.h",
 		"/home/daniel/Descargas/Clase7/main.cpp",
-		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Consolas.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Nintendo.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Nintendo.h",
 		"/home/daniel/Descargas/Clase7/Empleado.cpp",
@@ -203,8 +323,6 @@
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Sony.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Sony.h",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Usuario.cpp",
-		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Usuario.h",
-		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Vendedor.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Vendedor.h",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/Microsoft.h",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosUbisoft.cpp",
@@ -214,7 +332,6 @@
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosElectronicArts.h",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosKonami.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosKonami.h",
-		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/JuegosMicrosoft.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/JuegosMicrosoft.h",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSquareEnix.cpp",
 		"/home/daniel/Documentos/proyecto/ProyectoLab_OscarVargas_ChristianHenriquez/juegosSquareEnix.h",
@@ -294,20 +411,18 @@
 		"/home/daniel/Documentos/Sobrecarga Operadores/Integer.cpp",
 		"/home/daniel/Documentos/Sobrecarga Operadores/Integer.h",
 		"/home/daniel/Documentos/ATM/main.cpp",
-		"/home/daniel/Documentos/ATM/atm.h",
-		"/home/daniel/Documentos/ATM/atm.cpp",
-		"/home/daniel/Documentos/Examenlab1_OscarVargas/Examenlab1_OscarVargas",
-		"/home/daniel/Documentos/ATM/Atm.cpp"
+		"/home/daniel/Documentos/ATM/atm.h"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -315,6 +430,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ListaVideojuegosT",
+			"ListaconsolasT",
+			"consolasvendidas"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -322,6 +440,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"ListaVideojuegos",
+			"Listaconsolas"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -341,15 +461,44 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 25770,
+						"buffer_size": 51169,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16679,
-								16679
+								43870,
+								43870
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 16506.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Venta.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1409,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13,
+								13
 							]
 						],
 						"settings":
@@ -361,7 +510,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Venta.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								850,
+								850
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -369,7 +547,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 21.0
 	},
 	"input":
 	{
@@ -406,7 +584,7 @@
 	"project": "Main.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 38.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -429,12 +607,12 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 392.0
 	},
 	"selected_group": 0,
 	"settings":

@@ -17,6 +17,7 @@ class Consolas
 
 	public:
 		Consolas(int, string, string, int, double);
+		Consolas(Consolas*);
 		Consolas();
 		
 		//mutadores

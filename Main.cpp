@@ -31,12 +31,13 @@
 #include "Vendedor.h"
 #include "Venta.h"
 
+
 using namespace std;
 
-void funcionvender(int cantartvend,double dinerogenerado,vector <Videojuegos*> ListaVideojuegosT);
+Venta* funcionvender(vector <Videojuegos*> ListaVideojuegosT,vector <Consolas*> listaconsolasT);
 void funcionAgregar(vector<Consolas*> Listaconsolas, vector<Videojuegos*> ListaVideojuegos);
 void funciondibujo();
-
+void imprimirVenta(Venta* venta);
 
 string hora();
 
@@ -48,11 +49,9 @@ void funcionListarConsola(vector<Consolas*>);
 int main()
 {
 	
-		vector<Consolas*> Listaconsolas;
-		vector<Videojuegos*> ListaVideojuegos;
+	vector<Consolas*> Listaconsolas;
+	vector<Videojuegos*> ListaVideojuegos;
 	
-
-
 
 
     cout<<endl<<endl;
@@ -802,50 +801,51 @@ int main()
 					{//AGREGAR A EL INVENTARIO	
 						//funcionAgregar(Listaconsolas, ListaVideojuegos);
 						//Agregar
-cout << "Que desea agregar?\n";
-cout << "1) Consola\n";
-cout << "2) Videojuego\n";
-int respuesta4;
-cin >> respuesta4;
-	while(respuesta4 < 1 || respuesta4 > 3) {
-		cout << "Numero invalido, ingrese su numero de nuevo!\n";
-		cin >> respuesta4;
-	}
-
-				if (respuesta4 == 1) //Agregar Consola
-				{
-					bool norepetido = true;
-					int aniodesalida;
-					string modelodeconsola;
-					string estadodeconsola;
-					int numerodeserie;
-					double preciodeconsola;
-
-					cout << "Ingrese el año de salida de la consola.\n";
-					cin >> aniodesalida;
-					cout << "Ingrese el estado de la consola.\n";
-					cin >> estadodeconsola;
-					cout << "Ingrese el numero de serie de la consola.\n";
-					cin >> numerodeserie;
-					for (int i = 0; i < Listaconsolas.size(); ++i)
-					{
-						if (numerodeserie == Listaconsolas.at(i) -> getNumeroSerie())
-						{
-							norepetido = false;
+						cout << "Que desea agregar?\n";
+						cout << "1) Consola\n";
+						cout << "2) Videojuego\n";
+						int respuesta4;
+						cin >> respuesta4;
+						while(respuesta4 < 1 || respuesta4 > 3) {
+							cout << "Numero invalido, ingrese su numero de nuevo!\n";
+							cin >> respuesta4;
 						}
-					}
-					while(norepetido == false) {
-						cout << "Numero de serie repetido, ingrese el numero de serie de nuevo!\n";
-						cin >> numerodeserie;
-						norepetido = true;
-						for (int i = 0; i < Listaconsolas.size(); ++i)
+
+						if (respuesta4 == 1) //Agregar Consola
 						{
-							if (numerodeserie == Listaconsolas[i] -> getNumeroSerie())
+							bool norepetido = true;
+							int aniodesalida;
+							string modelodeconsola;
+							string estadodeconsola;
+							int numerodeserie;
+							double preciodeconsola;
+
+							cout << "Ingrese el año de salida de la consola.\n";
+							cin >> aniodesalida;
+							cout << "Ingrese el estado de la consola.\n";
+							cin >> estadodeconsola;
+							cout << "Ingrese el numero de serie de la consola.\n";
+							cin >> numerodeserie;
+							for (int i = 0; i < Listaconsolas.size(); ++i)
 							{
-								norepetido = false;
+								if (numerodeserie == Listaconsolas.at(i) -> getNumeroSerie())
+								{
+									norepetido = false;
+								}
 							}
-						}
-					}
+							while(norepetido == false)
+							{
+								cout << "Numero de serie repetido, ingrese el numero de serie de nuevo!\n";
+								cin >> numerodeserie;
+								norepetido = true;
+								for (int i = 0; i < Listaconsolas.size(); ++i)
+								{
+									if (numerodeserie == Listaconsolas[i] -> getNumeroSerie())
+									{
+										norepetido = false;
+									}
+								}
+							}
 					cout << "Ingrese el precio de la Consola: \n";
 					cin >> preciodeconsola;
 
@@ -1096,12 +1096,149 @@ cin >> respuesta4;
 						}
 						cout << endl;
 					} //Fin if agregar consola o videojuego
+					//-----------------------------------------------------------------	vender
 					}//vender
 					if (opcvendedor==2)
 					{		
 						cout << endl;
-						
-						funcionvender(cantartvend,dinerogenerado,ListaVideojuegos);
+						//Venta* venta;
+						//venta=funcionvender(ListaVideojuegos,Listaconsolas);
+						//venta->setNombreusuario(nombrevendedor);
+
+						//-------------------------------------------------------------------------
+						Videojuegos* juegot;
+						vector <Consolas*> consolasvendidas;
+						vector <Videojuegos*> juegosvendidos;
+						int cantartvend=0;
+						double subtotal=0;
+						cout<<"    ___\n   |[_]|\n   |+ ;| GAMEHUB\n   `---'\n";
+						cout<<"\n      Bienvenido vendedor\n";
+						cout<<endl;
+
+						Venta* venta;
+
+						int respv=5;
+						while(respv!=3)
+						{	 
+							cout<<endl;
+							cout<<"¿Que es lo que desea vender?\n";
+							cout<<"1.-Consolas\n2.-Videojuegos\nOpcion: "<<endl;
+							cin>>respv;//respuesta venta
+							cout<<endl<<endl;
+
+							if (respv==1)
+							{//vender consolas
+								
+								cout<<"----------*LISTA DE CONSOLAS*-----------"<<endl;
+								for (int i = 0; i < Listaconsolas.size(); ++i)
+								{
+									cout << "consola numero: "<<i<<endl;
+									cout << "Consola numero: " << (i+1) << endl;
+									cout << "El precio es de: " << Listaconsolas.at(i) -> getPrecio() << endl;
+									cout << "----------------------------------------------" << endl;
+								}
+								int opcconsola;
+									Consolas*  consolat;
+									cout<< "¿Cual numero de consola desea?"<<endl;
+									cin>>opcconsola;
+									
+									for (int i = 0; i < Listaconsolas.size(); ++i)
+									{
+										if (i==opcconsola)
+										{
+											consolat=Listaconsolas.at(i);
+											consolasvendidas.push_back(consolat);
+											cantartvend++;
+											cout<<"Agregado a el carrito"<<endl;
+											cout<<"-------------------"<<cantartvend<<endl;
+										}else{
+											cout<<"ese numero no existe (-.-')"<<endl;
+										}
+									}
+					 		}
+						 	if (respv==2)
+						 	{//VENDER VIDEOJUEGOS
+						 		cout<<"----------*LISTA DE VIDEOJUEGOS*-----------"<<endl;
+
+					 			for (int i = 0; i < ListaVideojuegos.size(); ++i)
+								{
+									cout << "Videojuego numero: "<<i<<endl;
+									cout << "El nombre del videojuego es: " << ListaVideojuegos.at(i) -> getNombre() << endl;
+									cout << "El precio es de: " << ListaVideojuegos.at(i) -> getPrecio() << endl;					
+									cout << "----------------------------------------------------" << endl;
+								}
+								Videojuegos* juegost;
+								int opcjuego;
+								cout<< "¿Cual numero de videojuego desea?"<<endl;
+								cin>>opcjuego;
+						 			
+								for (int i = 0; i < ListaVideojuegos.size(); ++i)
+								{
+									if (i==opcjuego)
+										{
+											juegost=ListaVideojuegos.at(i);
+											juegosvendidos.push_back(juegost);
+											cantartvend++;
+											cout<<"Agregado a el carrito"<<endl;
+											cout<<"-------------------"<<cantartvend<<endl;
+										}else
+										{
+											cout<<"ese numero no existe (-.-')"<<endl;
+										}
+									}
+									//cout<<consolasvendidas.at(0)->getEstado();
+							
+								cantartvend++;
+						 	}
+						 	char respventa;
+						 	cout<<"¿desea vender algo mas?(s/n)";
+						 	cin>>respventa;
+						 	if (respventa=='s' || respventa=='S')
+						 	{
+						 		respv=5;
+						 	}else
+						 	{
+						 		string nomcli;//nombre del cliente
+						 		cout<<"A nombre de quien sera la factura: ";
+						 		cin>>nomcli;
+						 		string horafinalizacion=hora();
+
+						 		for (int i = 0; i < consolasvendidas.size(); ++i)
+						 		{
+						 			subtotal+=consolasvendidas.at(i)->getPrecio();
+						 		}
+						 		for (int i = 0; i < juegosvendidos.size(); ++i)
+						 		{
+						 			subtotal+=juegosvendidos.at(i)->getPrecio();
+						 		}
+
+						 		cout<<"subtotal: "<<subtotal<<endl;
+
+						 		//venta=new Venta(nomcli,consolasvendidas,juegosvendidos,horafinalizacion,nombrevendedor,subtotal);
+								
+						 		venta->setNombrecliente(nomcli);
+						 		venta->setListaconsolas(consolasvendidas);
+						 		venta->setListavideojuegos(juegosvendidos);
+						 		venta->setHorafinalizacion(horafinalizacion);
+								venta->setNombreusuario(nombrevendedor);
+								venta->setSubtotal(subtotal);
+								
+
+						 		respv=3;
+						 	}		
+						}
+
+
+
+						//---------------------------------------------------------------------------------------------------
+
+
+
+
+						//cout << venta->getListavideojuegos(0)->getNombre() <<endl;
+
+						imprimirVenta(venta);
+
 						string horasalida=hora();
 					}
 				}
@@ -1148,8 +1285,16 @@ cin >> respuesta4;
 	cout<<nin->getModelo()<<"ESOOOOOO"<<endl;
 		return 0;*/
 	//}
-void funcionvender(int cantartvend,double dinerogenerado,vector <Videojuegos*> ListaVideojuegosT)
+
+Venta* funcionvender(vector <Videojuegos*> ListaVideojuegosT,vector <Consolas*> ListaconsolasT)
 {
+
+	Videojuegos* juegot;
+	vector <Consolas*> consolasvendidas;
+	vector <Videojuegos*> juegosvendidos;
+	int cantartvend=0;
+	double subtotal=0;
+
 	cout<<"    ___\n   |[_]|\n   |+ ;| GAMEHUB\n   `---'\n";
 	cout<<"\n      Bienvenido vendedor\n";
 	cout<<endl;
@@ -1159,49 +1304,113 @@ void funcionvender(int cantartvend,double dinerogenerado,vector <Videojuegos*> L
 	{	 
 		cout<<endl;
 		cout<<"¿Que es lo que desea vender?\n";
-		cout<<"1.-Consolas\n2.-Videojuegos\n3.-no vender nada"<<endl;
+		cout<<"1.-Consolas\n2.-Videojuegos\nOpcion: "<<endl;
 		cin>>respv;//respuesta venta
+		cout<<endl<<endl;
+
 		if (respv==1)
 		{//vender consolas
-							
-			cantartvend++;
+			
+			cout<<"----------*LISTA DE CONSOLAS*-----------"<<endl;
+			for (int i = 0; i < ListaconsolasT.size(); ++i)
+			{
+				cout << "consola numero: "<<i<<endl;
+				cout << "Consola numero: " << (i+1) << endl;
+				cout << "El precio es de: " << ListaconsolasT.at(i) -> getPrecio() << endl;
+				cout << "----------------------------------------------" << endl;
+			}
+			int opcconsola;
+				Consolas*  consolat;
+				cout<< "¿Cual numero de consola desea?"<<endl;
+				cin>>opcconsola;
+				
+				for (int i = 0; i < ListaconsolasT.size(); ++i)
+				{
+					if (i==opcconsola)
+					{
+						consolat=ListaconsolasT.at(i);
+						consolasvendidas.push_back(consolat);
+						cantartvend++;
+						cout<<"Agregado a el carrito"<<endl;
+						cout<<"-------------------"<<cantartvend<<endl;
+					}else{
+						cout<<"ese numero no existe (-.-')"<<endl;
+					}
+				}
  		}
 	 	if (respv==2)
-	 	{//si VENDER VIDEOJUEGOS
-	 	
+	 	{//VENDER VIDEOJUEGOS
+	 		cout<<"----------*LISTA DE VIDEOJUEGOS*-----------"<<endl;
+
  			for (int i = 0; i < ListaVideojuegosT.size(); ++i)
 			{
-				
-				cout << "opcion"<<i<<endl;
+				cout << "Videojuego numero: "<<i<<endl;
 				cout << "El nombre del videojuego es: " << ListaVideojuegosT.at(i) -> getNombre() << endl;
 				cout << "El precio es de: " << ListaVideojuegosT.at(i) -> getPrecio() << endl;					
 				cout << "----------------------------------------------------" << endl;
 			}
-			cout<<"que viva las drogas";
+			Videojuegos* juegost;
+			int opcjuego;
+			cout<< "¿Cual numero de videojuego desea?"<<endl;
+			cin>>opcjuego;
+	 			
+			for (int i = 0; i < ListaVideojuegosT.size(); ++i)
+			{
+				if (i==opcjuego)
+					{
+						juegost=ListaVideojuegosT.at(i);
+						juegosvendidos.push_back(juegost);
+						cantartvend++;
+						cout<<"Agregado a el carrito"<<endl;
+						cout<<"-------------------"<<cantartvend<<endl;
+					}else
+					{
+						cout<<"ese numero no existe (-.-')"<<endl;
+					}
+				}
+				//cout<<consolasvendidas.at(0)->getEstado();
+		
+			cantartvend++;
+	 	}
+	 	char respventa;
+	 	cout<<"¿desea vender algo mas?(s/n)";
+	 	cin>>respventa;
+	 	if (respventa=='s' || respventa=='S')
+	 	{
+	 		respv=5;
+	 	}else
+	 	{
+	 		string nomcli;//nombre del cliente
+	 		cout<<"A nombre de quien sera la factura: ";
+	 		cin>>nomcli;
+	 		string horafinalizacion=hora();
+
+	 		for (int i = 0; i < consolasvendidas.size(); ++i)
+	 		{
+	 			subtotal+=consolasvendidas.at(i)->getPrecio();
+	 		}
+	 		for (int i = 0; i < juegosvendidos.size(); ++i)
+	 		{
+	 			subtotal+=juegosvendidos.at(i)->getPrecio();
+	 		}
+
+	 		cout<<"subtotal: "<<subtotal<<endl;
+
+	 		Venta* venta=new Venta(nomcli,consolasvendidas,juegosvendidos,horafinalizacion,"temporal",subtotal);
+	
+	 		return venta;
+	 		respv=3;
 	 	}		
 	}
+
+
 }
 
 
 
 
 
-/*
-string hora()
-{
 
-string horaactual;
-/*
-//para solo imprimir la hora en void 
-time_t tiempo = time(0);
-struct tm *hora = localtime(&tiempo);
-char output[50];
-strftime(output,50,"%H:%M:%S",hora);
-strftime(output,50,"%H:%M:%S",hora);
-printf("%s\n",output);
-*/
-//return horaactual;
-//}
 
 string hora()
 {
@@ -1295,4 +1504,42 @@ void funcionListarJuego(vector<Videojuegos*> ListaVideojuegosT) {
 		cout << "El precio es de: " << ListaVideojuegosT.at(i) -> getPrecio() << endl;
 		cout << "----------------------------------------------------" << endl;
 	}
+}
+
+
+void imprimirVenta(Venta* venta)
+{
+	int contarticulos=0;
+	ofstream  salida;
+	stringstream stm;
+	string fichero;
+
+	string horafinalizacion=hora();
+	stm << "./log_ventas/" << horafinalizacion << ".log";
+	fichero = stm.str();
+	salida.open(fichero.c_str());
+	salida << "-----------GAMEHUB---------" << endl;
+	salida << "---------------------------" << endl;
+	salida << venta->getHorafinalizacion()<<"yolo" << endl;
+	salida << "Vendedor: " << venta->getNombreusuario()<< endl;
+	salida << "Cliente: " << venta->getNombrecliente() << endl;
+	int contador = venta->getTamConsola() + venta->getTamJuegos();
+
+	salida << "Cantidad de articulos " << contador  << endl;
+
+	for (int i=0; i < venta->getTamConsola(); i++)
+	{
+		salida << venta->getListaconsolas.at(i)->getModelo() << "    L." << venta->getListaconsolas.at(i)->getPrecio() << endl;
+	}
+	for (int i=0; i < venta->getTamJuegos(); i++)
+	{
+ 		salida << venta->getListavideojuegos.at(i)->getNombre() << "     L." << venta->getListavideojuegos.at(i)->getPrecio() << endl;
+	}
+
+	salida << "Subtotal: " << venta->getSubtotal() << endl;
+	double impuesto = venta->getSubtotal()*0.15;
+	salida << "Impuesto: " << impuesto << endl;
+	double total = venta->getSubtotal() + impuesto;
+	salida << "Total: " << total << endl;
+	salida.close();
 }
