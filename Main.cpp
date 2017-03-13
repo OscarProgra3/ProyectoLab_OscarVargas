@@ -1881,13 +1881,16 @@ void imprimirVenta(Venta* venta)
 
 	salida << "Cantidad de articulos " << contador  << endl;
 
+	vector <Consolas*> listaconsolasTe = venta -> getListaconsolas();
+	vector<Videojuegos*> listavideojuegosTe = venta -> getListavideojuegos();
+
 	for (int i=0; i < venta->getTamConsola(); i++)
 	{
-		salida << venta->getListaconsolas.at(i)->getModelo() << "    L." << venta->getListaconsolas.at(i)->getPrecio() << endl;
+		salida << listaconsolasTe.at(i)->getModelo() << "    L." << listaconsolasTe.at(i)->getPrecio() << endl;
 	}
 	for (int i=0; i < venta->getTamJuegos(); i++)
 	{
- 		salida << venta->getListavideojuegos.at(i)->getNombre() << "     L." << venta->getListavideojuegos.at(i)->getPrecio() << endl;
+ 		salida << listavideojuegosTe.at(i)->getNombre() << "     L." << listavideojuegosTe.at(i)->getPrecio() << endl;
 	}
 
 	salida << "Subtotal: " << venta->getSubtotal() << endl;
@@ -1896,4 +1899,5 @@ void imprimirVenta(Venta* venta)
 	double total = venta->getSubtotal() + impuesto;
 	salida << "Total: " << total << endl;
 	salida.close();
+
 }

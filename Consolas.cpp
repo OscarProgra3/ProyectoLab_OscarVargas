@@ -64,17 +64,4 @@ double Consolas::getPrecio()
 void Consolas::setPrecio(double tprecio)
 {
 	precio=tprecio;
-<<<<<<< HEAD
 }
-
-
-
-
-
-
-
-
-
-=======
-}
->>>>>>> 4aab2e6516debd723d6f4ee247f0b037c7c0981e

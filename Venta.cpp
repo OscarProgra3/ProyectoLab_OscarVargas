@@ -23,13 +23,13 @@ void Venta::setNombrecliente(string tnombrecliente)
 }
 
 
-vector <Consolas*> Venta::getListaconsolas(int num)
+vector <Consolas*> Venta::getListaconsolas()
 {				
-	return listaconsolas.at(num);
+	return listaconsolas;
 }
 void Venta::setListaconsolas(vector <Consolas*> e)
 {
-	listaconsolas.push_back(e);
+	listaconsolas = e;
 }
 
 int Venta::getTamConsola()
@@ -41,13 +41,14 @@ int Venta::getTamJuegos()
 	return listavideojuegos.size();
 }
 
-vector <Videojuegos*>  Venta::getListavideojuegos(int num)
+vector <Videojuegos*>  Venta::getListavideojuegos()
 {
-	return listavideojuegos.at(num)	;
+	return listavideojuegos;
 }
+
 void Venta::setListavideojuegos(vector <Videojuegos*>  e)
 {
-	listavideojuegos.push_back(e);
+	listavideojuegos = e;
 }
 
 string Venta::getHorafinalizacion()
