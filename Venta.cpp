@@ -2,15 +2,16 @@
 #include "Consolas.h"
 
 
-Venta::Venta(string nomcliente, vector<Consolas*> listaconsola, vector<Videojuegos*> listavideojuegos, 
-	string horafinalizacion, string nombreusuario, double subtotal)
+
+Venta::Venta(string pnomcliente, vector<Consolas*> plistaconsola, vector<Videojuegos*> plistavideojuegos, 
+	string phorafinalizacion, string pnombreusuario, double psubtotal)
 {
-	nomcliente=nomcliente;
-	listaconsolas=listaconsolas;
-	listavideojuegos=listavideojuegos;
-	horafinalizacion=horafinalizacion;
-	nombreusuario=nombreusuario;
-	subtotal=subtotal;
+	nomcliente=pnomcliente;
+	listaconsolas=plistaconsola;
+	listavideojuegos=plistavideojuegos;
+	horafinalizacion=phorafinalizacion;
+	nombreusuario=pnombreusuario;
+	subtotal=psubtotal;
 }
 
 string Venta::getNombrecliente()
